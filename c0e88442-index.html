@@ -6,89 +6,133 @@
 <meta name="theme-color" content="#152b4a">
 <title>École Privée Les Étoiles — Gestion scolaire</title>
 <style>
-:root{--navy:#152b4a;--blue:#245ca6;--gold:#eab84b;--ink:#1c2636;--muted:#65748b;--bg:#f4f7fb;--line:#e4eaf2;--green:#23865b;--red:#a23a36}
-*{box-sizing:border-box}
-body{margin:0;font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;color:var(--ink);background:var(--bg);line-height:1.5}
-button,input,select{font:inherit}
-.hidden{display:none!important}
-.shell{min-height:100vh;display:grid;place-items:center;padding:20px}
-.login{width:min(100%,440px);background:white;border:1px solid var(--line);border-radius:20px;padding:26px;box-shadow:0 15px 50px #152b4a12}
-.brand{display:flex;gap:12px;align-items:center;margin-bottom:22px}
-.logo{width:48px;height:48px;display:grid;place-items:center;border-radius:14px;background:var(--gold);color:var(--navy);font-size:24px;font-weight:900}
-.brand strong{display:block;font-size:17px;line-height:1.2}
-.brand small{color:var(--muted)}
-h1{font-size:23px;margin:0 0 5px}
-p{color:var(--muted);font-size:13px;margin:0 0 20px}
-.field{display:grid;gap:6px;margin:14px 0}
-.field label{font-size:12px;font-weight:700}
-.field input,.field select{width:100%;padding:12px;border:1px solid #d8e0eb;border-radius:10px;background:#fff;color:var(--ink)}
-.btn{border:0;background:var(--blue);color:white;font-weight:800;padding:12px 15px;border-radius:10px;cursor:pointer}
-.btn:disabled{opacity:.55;cursor:not-allowed}
-.btn.light{background:#e9f0fa;color:var(--blue)}
-.full{width:100%}
-.msg{font-size:12px;margin-top:12px;white-space:pre-wrap}
-.error{color:var(--red)}
-.ok{color:var(--green)}
-.note{font-size:11px;border-top:1px solid var(--line);margin-top:20px;padding-top:14px}
-.app{min-height:100vh;display:grid;grid-template-columns:220px 1fr}
-.side{background:var(--navy);color:white;padding:20px 13px;display:flex;flex-direction:column;gap:22px}
-.side .brand{padding:4px 6px 17px;border-bottom:1px solid #ffffff25}
-.side .brand small{color:#c4d2e4}
-.nav{display:grid;gap:5px}
-.nav button{background:transparent;color:#d7e1ef;border:0;text-align:left;padding:11px;border-radius:9px}
-.nav button.active{background:#ffffff18;color:white;box-shadow:inset 3px 0 var(--gold)}
-.side-note{margin-top:auto;color:#c6d4e5;font-size:11px;border:1px solid #ffffff24;border-radius:11px;padding:12px}
-.main{min-width:0}
-.top{display:flex;align-items:center;justify-content:space-between;gap:12px;background:white;border-bottom:1px solid var(--line);padding:17px 22px}
-.eyebrow{font-size:10px;text-transform:uppercase;letter-spacing:1px;font-weight:800;color:var(--muted)}
-.top h2{font-size:19px;margin:2px 0 0}
-.top-actions{display:flex;align-items:center;gap:10px}
-.year{font-size:11px;border:1px solid var(--line);border-radius:8px;padding:8px}
-.content{padding:22px;max-width:1300px;margin:auto}
-.welcome{padding:23px;border-radius:16px;background:linear-gradient(115deg,#18365e,#2867ad);color:white;margin-bottom:20px}
-.welcome h3{font-size:22px;margin:4px 0}
-.welcome p{color:#dce8f8;margin:0}
-.metrics{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-bottom:20px}
-.metric,.panel{background:white;border:1px solid var(--line);border-radius:13px;padding:16px;margin-bottom:16px}
-.metrics .metric{margin-bottom:0}
-.metric small{display:block;color:var(--muted);font-size:12px}
-.metric strong{font-size:25px}
-.panel h3{font-size:15px;margin:0 0 13px}
-.tablewrap{overflow:auto;border:1px solid var(--line);border-radius:10px}
-table{border-collapse:collapse;width:100%;min-width:560px;background:white}
-th,td{text-align:left;padding:11px 13px;border-bottom:1px solid var(--line);font-size:12px}
-th{font-size:10px;color:var(--muted);text-transform:uppercase;background:#f9fbfd}
-.empty{text-align:center;color:var(--muted);padding:24px}
-.toolbar{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px}
-.toolbar input{padding:10px;border:1px solid var(--line);border-radius:9px;min-width:0;flex:1}
-.badge{background:#eaf7ef;color:#20764f;border-radius:6px;padding:4px 7px;font-size:10px;font-weight:800}
-.footer{text-align:center;font-size:10px;color:var(--muted);padding:24px 0}
-.toast{position:fixed;bottom:18px;left:50%;transform:translateX(-50%);background:var(--navy);color:white;padding:12px 16px;border-radius:10px;font-size:12px;max-width:90vw;display:none;z-index:5}
-.formgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 14px}
-.formgrid .span2{grid-column:1/-1}
-.hint{font-size:11px;color:var(--muted);margin:0}
-@media(max-width:700px){
-.app{display:block}
-.side{padding:10px;gap:10px}
-.side .brand{padding:4px 6px 10px;margin:0}
-.side .brand .logo{width:38px;height:38px}
-.nav{display:flex;overflow-x:auto;gap:4px}
-.nav button{white-space:nowrap;font-size:12px;padding:9px}
-.side-note{display:none}
-.content{padding:13px}
-.top{padding:13px}
-.year{display:none}
-.metrics{grid-template-columns:repeat(2,minmax(0,1fr))}
-.welcome{padding:18px}
-.welcome h3{font-size:20px}
-.login{padding:21px}
-.formgrid{grid-template-columns:1fr}
+:root {
+  --navy:#152b4a;
+  --blue:#245ca6;
+  --gold:#eab84b;
+  --ink:#1c2636;
+  --muted:#65748b;
+  --bg:#f4f7fb;
+  --line:#e4eaf2;
+  --green:#23865b;
+  --red:#a23a36;
+}
+* {box-sizing:border-box}
+body {
+  margin:0;
+  font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;
+  color:var(--ink);
+  background:var(--bg);
+  line-height:1.5;
+}
+button,input,select {font:inherit}
+.hidden {display:none!important}
+.shell {min-height:100vh;display:grid;place-items:center;padding:20px}
+.login {
+  width:min(100%,440px);background:white;border:1px solid var(--line);
+  border-radius:20px;padding:26px;box-shadow:0 15px 50px #152b4a12;
+}
+.brand {display:flex;gap:12px;align-items:center;margin-bottom:22px}
+.logo {
+  width:48px;height:48px;display:grid;place-items:center;border-radius:14px;
+  background:var(--gold);color:var(--navy);font-size:24px;font-weight:900;
+}
+.brand strong {display:block;font-size:17px;line-height:1.2}
+.brand small {color:var(--muted)}
+h1 {font-size:23px;margin:0 0 5px}
+p {color:var(--muted);font-size:13px;margin:0 0 16px}
+.field {display:grid;gap:6px;margin:12px 0}
+.field label {font-size:12px;font-weight:700}
+.field input,.field select {
+  width:100%;padding:11px;border:1px solid #d8e0eb;border-radius:9px;
+  background:white;color:var(--ink);min-width:0;
+}
+.btn {
+  border:0;background:var(--blue);color:white;font-weight:800;
+  padding:11px 15px;border-radius:9px;cursor:pointer;
+}
+.btn:disabled {opacity:.55;cursor:wait}
+.btn.secondary {background:#eaf0f8;color:var(--navy)}
+.full {width:100%}
+.msg {font-size:12px;margin-top:10px;white-space:pre-wrap}
+.error {color:var(--red)}
+.ok {color:var(--green)}
+.note {font-size:11px;border-top:1px solid var(--line);margin-top:20px;padding-top:14px}
+.app {min-height:100vh;display:grid;grid-template-columns:220px 1fr}
+.side {
+  background:var(--navy);color:white;padding:20px 13px;
+  display:flex;flex-direction:column;gap:22px;
+}
+.side .brand {padding:4px 6px 17px;border-bottom:1px solid #ffffff25}
+.side .brand small {color:#c4d2e4}
+.nav {display:grid;gap:5px}
+.nav button {
+  background:transparent;color:#d7e1ef;border:0;text-align:left;
+  padding:11px;border-radius:9px;cursor:pointer;
+}
+.nav button.active {background:#ffffff18;color:white;box-shadow:inset 3px 0 var(--gold)}
+.side-note {
+  margin-top:auto;color:#c6d4e5;font-size:11px;
+  border:1px solid #ffffff24;border-radius:11px;padding:12px;
+}
+.main {min-width:0}
+.top {
+  display:flex;align-items:center;justify-content:space-between;gap:12px;
+  background:white;border-bottom:1px solid var(--line);padding:17px 22px;
+}
+.eyebrow {font-size:10px;text-transform:uppercase;letter-spacing:1px;font-weight:800;color:var(--muted)}
+.top h2 {font-size:19px;margin:2px 0 0}
+.top-actions {display:flex;align-items:center;gap:10px}
+.year {font-size:11px;border:1px solid var(--line);border-radius:8px;padding:8px}
+.content {padding:22px;max-width:1300px;margin:auto}
+.welcome {
+  padding:23px;border-radius:16px;background:linear-gradient(115deg,#18365e,#2867ad);
+  color:white;margin-bottom:20px;
+}
+.welcome h3 {font-size:22px;margin:4px 0}
+.welcome p {color:#dce8f8;margin:0}
+.metrics {display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-bottom:20px}
+.metric,.panel {background:white;border:1px solid var(--line);border-radius:13px;padding:16px;margin-bottom:16px}
+.metric small {display:block;color:var(--muted);font-size:12px}
+.metric strong {font-size:25px}
+.panel h3 {font-size:15px;margin:0 0 13px}
+.form-grid {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 14px}
+.form-actions {display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}
+.tablewrap {overflow:auto;border:1px solid var(--line);border-radius:10px}
+table {border-collapse:collapse;width:100%;min-width:650px;background:white}
+th,td {text-align:left;padding:11px 13px;border-bottom:1px solid var(--line);font-size:12px}
+th {font-size:10px;color:var(--muted);text-transform:uppercase;background:#f9fbfd}
+.empty {text-align:center;color:var(--muted);padding:24px}
+.toolbar {display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px}
+.toolbar input {padding:10px;border:1px solid var(--line);border-radius:9px;min-width:0;flex:1}
+.badge {background:#eaf7ef;color:#20764f;border-radius:6px;padding:4px 7px;font-size:10px;font-weight:800}
+.footer {text-align:center;font-size:10px;color:var(--muted);padding:24px 0}
+.toast {
+  position:fixed;bottom:18px;left:50%;transform:translateX(-50%);
+  background:var(--navy);color:white;padding:12px 16px;border-radius:10px;
+  font-size:12px;max-width:90vw;display:none;z-index:5;
+}
+@media(max-width:700px) {
+  .app {display:block}
+  .side {padding:10px;gap:10px}
+  .side .brand {padding:4px 6px 10px;margin:0}
+  .side .brand .logo {width:38px;height:38px}
+  .nav {display:flex;overflow-x:auto;gap:4px}
+  .nav button {white-space:nowrap;font-size:12px;padding:9px}
+  .side-note {display:none}
+  .content {padding:13px}
+  .top {padding:13px}
+  .year {display:none}
+  .metrics {grid-template-columns:repeat(2,minmax(0,1fr))}
+  .welcome {padding:18px}
+  .welcome h3 {font-size:20px}
+  .login {padding:21px}
+  .form-grid {grid-template-columns:1fr}
 }
 </style>
 </head>
 <body>
 
-<!-- ===== PAGE DE CONNEXION ===== -->
 <div id="loginView" class="shell">
   <form id="loginForm" class="login">
     <div class="brand">
@@ -97,15 +141,20 @@ th{font-size:10px;color:var(--muted);text-transform:uppercase;background:#f9fbfd
     </div>
     <h1>Connexion</h1>
     <p>Connectez-vous avec le compte autorisé par l’administration.</p>
-    <div class="field"><label for="email">Adresse e-mail</label><input id="email" type="email" autocomplete="username" required placeholder="administration@ecole.cd"></div>
-    <div class="field"><label for="password">Mot de passe</label><input id="password" type="password" autocomplete="current-password" required placeholder="Votre mot de passe"></div>
+    <div class="field">
+      <label for="email">Adresse e-mail</label>
+      <input id="email" type="email" autocomplete="username" required placeholder="Votre adresse e-mail">
+    </div>
+    <div class="field">
+      <label for="password">Mot de passe</label>
+      <input id="password" type="password" autocomplete="current-password" required placeholder="Votre mot de passe">
+    </div>
     <button id="loginBtn" class="btn full" type="submit">Se connecter</button>
     <div id="loginMsg" class="msg" role="status"></div>
     <div class="note">Accès réservé à l’administrateur et au personnel autorisé. Ne partagez jamais votre mot de passe.</div>
   </form>
 </div>
 
-<!-- ===== APPLICATION ===== -->
 <div id="appView" class="app hidden">
   <aside class="side">
     <div class="brand">
@@ -118,15 +167,12 @@ th{font-size:10px;color:var(--muted);text-transform:uppercase;background:#f9fbfd
       <button data-page="payments">Paiements</button>
       <button data-page="settings">État de connexion</button>
     </nav>
-    <div class="side-note">Données lues depuis Supabase. Les autres modules seront ajoutés étape par étape.</div>
+    <div class="side-note">Gestion des élèves connectée à Supabase. Les paiements seront activés dans une prochaine étape.</div>
   </aside>
 
   <main class="main">
     <header class="top">
-      <div>
-        <div class="eyebrow">Administration scolaire</div>
-        <h2 id="pageTitle">Tableau de bord</h2>
-      </div>
+      <div><div class="eyebrow">Administration scolaire</div><h2 id="pageTitle">Tableau de bord</h2></div>
       <div class="top-actions">
         <span class="year">2026–2027 · USD</span>
         <button id="logoutBtn" class="btn">Déconnexion</button>
@@ -134,8 +180,6 @@ th{font-size:10px;color:var(--muted);text-transform:uppercase;background:#f9fbfd
     </header>
 
     <div class="content">
-
-      <!-- Tableau de bord -->
       <section id="dashboardPage">
         <div class="welcome">
           <div class="eyebrow" style="color:#f5d88e">Espace de gestion</div>
@@ -143,100 +187,117 @@ th{font-size:10px;color:var(--muted);text-transform:uppercase;background:#f9fbfd
           <p>La connexion sécurisée à la base de données est active.</p>
         </div>
         <div class="metrics">
-          <div class="metric"><small>Élèves dans la base</small><strong id="studentCount">—</strong></div>
-          <div class="metric"><small>Personnel dans la base</small><strong id="staffCount">—</strong></div>
+          <div class="metric"><small>Élèves enregistrés</small><strong id="studentCount">—</strong></div>
+          <div class="metric"><small>Personnel enregistré</small><strong id="staffCount">—</strong></div>
           <div class="metric"><small>Profil connecté</small><strong id="roleValue" style="font-size:17px">—</strong></div>
         </div>
-        <div class="panel" style="margin-top:20px">
+        <div class="panel">
           <h3>État de connexion</h3>
           <div id="connectionStatus" class="msg">Vérification…</div>
         </div>
       </section>
 
-      <!-- Élèves -->
       <section id="studentsPage" class="hidden">
-
-        <div id="enrollPanel" class="panel">
-          <div style="display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap">
-            <h3 style="margin:0">Inscrire un élève</h3>
-            <button id="toggleEnrollBtn" type="button" class="btn light">Ouvrir le formulaire</button>
-          </div>
-          <div id="enrollBody" class="hidden" style="margin-top:12px">
-            <form id="enrollForm" novalidate>
-              <div class="formgrid">
-                <div class="field"><label for="fFirstName">Nom *</label><input id="fFirstName" type="text" maxlength="60" autocomplete="off"></div>
-                <div class="field"><label for="fLastName">Postnom *</label><input id="fLastName" type="text" maxlength="60" autocomplete="off"></div>
-                <div class="field">
-                  <label for="fSex">Sexe *</label>
-                  <select id="fSex">
-                    <option value="">— Choisir —</option>
-                    <option value="M">Masculin</option>
-                    <option value="F">Féminin</option>
-                  </select>
-                </div>
-                <div class="field"><label for="fBirth">Date de naissance</label><input id="fBirth" type="date"></div>
-                <div class="field">
-                  <label for="fClass">Classe *</label>
-                  <select id="fClass"><option value="">Chargement des classes…</option></select>
-                </div>
-                <div class="field"><label for="fYear">Année scolaire *</label><input id="fYear" type="text" value="2026-2027" maxlength="9" inputmode="numeric"><p class="hint">Format : 2026-2027</p></div>
-                <div class="field"><label for="fGuardian">Parent ou tuteur</label><input id="fGuardian" type="text" maxlength="100" autocomplete="off"></div>
-                <div class="field"><label for="fPhone">Téléphone du parent ou tuteur</label><input id="fPhone" type="tel" maxlength="20" autocomplete="off" placeholder="+243 ..."></div>
-                <div class="field">
-                  <label for="fStatus">Statut *</label>
-                  <select id="fStatus">
-                    <option value="Actif" selected>Actif</option>
-                    <option value="Inactif">Inactif</option>
-                    <option value="Transfere">Transféré</option>
-                    <option value="Diplome">Diplômé</option>
-                  </select>
-                </div>
+        <div class="panel">
+          <h3>Inscrire un nouvel élève</h3>
+          <p>Les informations seront enregistrées dans la base de données de l’école.</p>
+          <form id="studentForm">
+            <div class="form-grid">
+              <div class="field">
+                <label for="firstName">Nom</label>
+                <input id="firstName" required maxlength="100" autocomplete="off">
               </div>
-              <p class="hint">Le matricule (ELV-0001, ELV-0002…) est attribué automatiquement par la base.</p>
-              <button id="enrollBtn" class="btn full" type="submit" style="margin-top:14px">Enregistrer l’élève</button>
-              <div id="enrollMsg" class="msg" role="status"></div>
-            </form>
-          </div>
-          <div id="enrollDenied" class="msg hidden">Seul l’administrateur peut inscrire un élève. Votre profil peut consulter la liste.</div>
+              <div class="field">
+                <label for="lastName">Postnom</label>
+                <input id="lastName" required maxlength="100" autocomplete="off">
+              </div>
+              <div class="field">
+                <label for="sex">Sexe</label>
+                <select id="sex" required>
+                  <option value="">Choisir…</option>
+                  <option value="M">Masculin</option>
+                  <option value="F">Féminin</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="birthDate">Date de naissance</label>
+                <input id="birthDate" type="date">
+              </div>
+              <div class="field">
+                <label for="classId">Classe</label>
+                <select id="classId" required>
+                  <option value="">Chargement des classes…</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="schoolYear">Année scolaire</label>
+                <input id="schoolYear" value="2026-2027" required>
+              </div>
+              <div class="field">
+                <label for="guardianName">Nom du parent ou tuteur</label>
+                <input id="guardianName" maxlength="150">
+              </div>
+              <div class="field">
+                <label for="guardianPhone">Téléphone du parent ou tuteur</label>
+                <input id="guardianPhone" type="tel" maxlength="30">
+              </div>
+              <div class="field">
+                <label for="studentStatus">Statut</label>
+                <select id="studentStatus" required>
+                  <option value="Actif">Actif</option>
+                  <option value="Inactif">Inactif</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-actions">
+              <button id="saveStudentBtn" class="btn" type="submit">Enregistrer l’élève</button>
+              <button class="btn secondary" type="reset">Effacer le formulaire</button>
+            </div>
+            <div id="studentFormMsg" class="msg" role="status"></div>
+          </form>
         </div>
 
         <div class="panel">
           <h3>Élèves enregistrés</h3>
-          <div class="toolbar"><input id="studentSearch" placeholder="Rechercher un matricule, un nom ou une classe"></div>
+          <div class="toolbar">
+            <input id="studentSearch" placeholder="Rechercher un matricule, un nom ou une classe">
+            <button id="refreshStudentsBtn" class="btn secondary" type="button">Actualiser</button>
+          </div>
           <div class="tablewrap">
             <table>
-              <thead><tr><th>Matricule</th><th>Nom</th><th>Postnom</th><th>Classe</th><th>Statut</th></tr></thead>
-              <tbody id="studentRows"><tr><td colspan="5" class="empty">Chargement…</td></tr></tbody>
+              <thead>
+                <tr><th>Matricule</th><th>Nom</th><th>Postnom</th><th>Classe</th><th>Sexe</th><th>Statut</th></tr>
+              </thead>
+              <tbody id="studentRows">
+                <tr><td colspan="6" class="empty">Chargement…</td></tr>
+              </tbody>
             </table>
           </div>
           <div id="studentMsg" class="msg"></div>
         </div>
       </section>
 
-      <!-- Paiements -->
       <section id="paymentsPage" class="hidden">
         <div class="panel">
           <h3>Paiements</h3>
-          <p>Le module de saisie et de consultation des paiements sera activé après la validation de l’inscription des élèves.</p>
-          <div id="paymentStatus" class="msg"></div>
+          <p>Le formulaire de paiement, le barème des frais et les reçus seront ajoutés dans une prochaine étape.</p>
+          <div class="msg">Aucun paiement ne peut encore être enregistré depuis cette page.</div>
         </div>
       </section>
 
-      <!-- État de connexion -->
       <section id="settingsPage" class="hidden">
         <div class="panel">
           <h3>Connexion Supabase</h3>
           <p>Projet : École les étoiles</p>
           <p id="projectStatus">Connexion en cours…</p>
+          <p>La gestion des élèves utilise les tables students et school_classes. Les droits de sécurité de Supabase restent appliqués.</p>
         </div>
       </section>
-
       <div class="footer">École Privée Les Étoiles · Année scolaire 2026–2027</div>
     </div>
   </main>
 </div>
-
-<div id="toast" class="toast"></div>
+<div id="toast" class="toast" role="status"></div>
 
 <script type="module">
 import { createClient } from 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/+esm';
@@ -247,83 +308,84 @@ const supabase = createClient(SUPABASE_URL, SUPABASE_PUBLISHABLE_KEY);
 
 const $ = id => document.getElementById(id);
 let allStudents = [];
-let currentRole = null;
-let classesLoaded = false;
+let allClasses = [];
 
-/* ---------- Outils d'affichage ---------- */
 function message(id, text, kind = '') {
   const el = $(id);
-  if (el) { el.textContent = text; el.className = 'msg ' + kind; }
+  if (el) {
+    el.textContent = text;
+    el.className = 'msg ' + kind;
+  }
 }
-let toastTimer;
+
 function toast(text) {
-  const t = $('toast');
-  t.textContent = text;
-  t.style.display = 'block';
-  clearTimeout(toastTimer);
-  toastTimer = setTimeout(() => { t.style.display = 'none'; }, 3500);
-}
-function escapeHtml(v) {
-  return String(v).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
-}
-function statusLabel(s) {
-  return ({ Actif: 'Actif', Inactif: 'Inactif', Transfere: 'Transféré', Diplome: 'Diplômé' })[s] || s || '—';
-}
-function showApp() { $('loginView').classList.add('hidden'); $('appView').classList.remove('hidden'); }
-function showLogin() { $('appView').classList.add('hidden'); $('loginView').classList.remove('hidden'); }
-
-/* ---------- Messages d'erreur compréhensibles ---------- */
-function friendlyError(err) {
-  const code = err && err.code;
-  const text = ((err && err.message) || '').toLowerCase();
-  if (code === '42501' || text.includes('row-level security') || text.includes('permission denied')) {
-    return "Action refusée : vous n'avez pas le droit de faire cette opération. Seul l'administrateur peut inscrire un élève.";
-  }
-  if (code === '23505') return "Ce matricule existe déjà. Réessayez dans un instant.";
-  if (code === '23503') return "La classe choisie n'existe pas. Rechargez la page puis choisissez une classe de la liste.";
-  if (code === '23514') return "Une valeur n'est pas acceptée par la base (sexe ou statut). Vérifiez le formulaire.";
-  if (code === '23502') return "Un champ obligatoire est vide. Vérifiez le formulaire.";
-  if (text.includes('failed to fetch') || text.includes('network')) {
-    return "Problème de connexion Internet. Vérifiez votre réseau puis réessayez.";
-  }
-  return (err && err.message) ? err.message : 'Une erreur est survenue. Réessayez.';
+  $('toast').textContent = text;
+  $('toast').style.display = 'block';
+  setTimeout(() => $('toast').style.display = 'none', 3000);
 }
 
-/* ---------- Navigation ---------- */
+function showApp() {
+  $('loginView').classList.add('hidden');
+  $('appView').classList.remove('hidden');
+}
+
+function showLogin() {
+  $('appView').classList.add('hidden');
+  $('loginView').classList.remove('hidden');
+}
+
 function navigate(page) {
   for (const p of ['dashboard', 'students', 'payments', 'settings']) {
     $(p + 'Page').classList.toggle('hidden', p !== page);
   }
-  document.querySelectorAll('[data-page]').forEach(b => b.classList.toggle('active', b.dataset.page === page));
-  $('pageTitle').textContent = ({ dashboard: 'Tableau de bord', students: 'Élèves', payments: 'Paiements', settings: 'État de connexion' })[page];
-  if (page === 'students') { loadStudents(); if (!classesLoaded) loadClasses(); }
-}
-document.querySelectorAll('[data-page]').forEach(b => b.addEventListener('click', () => navigate(b.dataset.page)));
+  document.querySelectorAll('[data-page]').forEach(button => {
+    button.classList.toggle('active', button.dataset.page === page);
+  });
+  $('pageTitle').textContent = ({
+    dashboard: 'Tableau de bord',
+    students: 'Gestion des élèves',
+    payments: 'Paiements',
+    settings: 'État de connexion'
+  })[page];
 
-/* ---------- Profil et résumé ---------- */
+  if (page === 'students') {
+    loadClasses();
+    loadStudents();
+  }
+}
+
+document.querySelectorAll('[data-page]').forEach(button => {
+  button.addEventListener('click', () => navigate(button.dataset.page));
+});
+
 async function checkProfile(user) {
-  const { data, error } = await supabase.from('profiles').select('full_name,role').eq('user_id', user.id).maybeSingle();
+  const { data, error } = await supabase
+    .from('profiles')
+    .select('full_name,role')
+    .eq('user_id', user.id)
+    .maybeSingle();
+
   if (error) throw error;
   if (!data || !['admin', 'personnel'].includes(data.role)) {
-    throw new Error("Aucun profil autorisé n'est associé à ce compte. Demandez à l'administrateur de vérifier la table profiles.");
+    throw new Error("Aucun profil autorisé n'est associé à ce compte. Vérifiez la table profiles.");
   }
-  currentRole = data.role;
+
   $('roleValue').textContent = data.role === 'admin' ? 'Administrateur' : 'Personnel';
-  const isAdmin = data.role === 'admin';
-  $('enrollBody').classList.add('hidden');
-  $('toggleEnrollBtn').textContent = 'Ouvrir le formulaire';
-  $('toggleEnrollBtn').classList.toggle('hidden', !isAdmin);
-  $('enrollDenied').classList.toggle('hidden', isAdmin);
   return data;
 }
 
 async function refreshSummary() {
-  const [{ count: studentsCount, error: sErr }, { count: staffCount, error: tErr }] = await Promise.all([
+  const [
+    { count: studentsCount, error: studentsError },
+    { count: staffCount, error: staffError }
+  ] = await Promise.all([
     supabase.from('students').select('*', { count: 'exact', head: true }),
     supabase.from('staff').select('*', { count: 'exact', head: true })
   ]);
-  if (sErr) throw sErr;
-  if (tErr) throw tErr;
+
+  if (studentsError) throw studentsError;
+  if (staffError) throw staffError;
+
   $('studentCount').textContent = studentsCount ?? 0;
   $('staffCount').textContent = staffCount ?? 0;
   $('connectionStatus').textContent = 'Connecté à Supabase. Les tables sont accessibles selon les règles de sécurité.';
@@ -331,179 +393,191 @@ async function refreshSummary() {
   $('projectStatus').textContent = 'Connexion authentifiée et lecture des tables testée.';
 }
 
-/* ---------- Classes ---------- */
 async function loadClasses() {
-  const select = $('fClass');
-  const { data, error } = await supabase.from('school_classes').select('id,class_name').order('id');
+  const select = $('classId');
+  select.innerHTML = '<option value="">Chargement des classes…</option>';
+
+  const { data, error } = await supabase
+    .from('school_classes')
+    .select('id,class_name')
+    .order('id');
+
   if (error) {
-    classesLoaded = false;
-    select.innerHTML = '<option value="">Impossible de charger les classes</option>';
-    message('enrollMsg', 'Lecture des classes impossible : ' + friendlyError(error), 'error');
+    select.innerHTML = '<option value="">Erreur de chargement</option>';
+    message('studentFormMsg', 'Impossible de charger les classes : ' + error.message, 'error');
     return;
   }
-  if (!data || data.length === 0) {
-    classesLoaded = false;
+
+  allClasses = data || [];
+  select.innerHTML = '<option value="">Choisir une classe…</option>';
+
+  allClasses.forEach(schoolClass => {
+    const option = document.createElement('option');
+    option.value = String(schoolClass.id);
+    option.textContent = schoolClass.class_name;
+    select.appendChild(option);
+  });
+
+  if (!allClasses.length) {
     select.innerHTML = '<option value="">Aucune classe enregistrée</option>';
-    message('enrollMsg', "La table des classes est vide. Ajoutez d'abord les classes dans Supabase.", 'error');
-    return;
   }
-  select.innerHTML = '<option value="">— Choisir une classe —</option>' +
-    data.map(c => `<option value="${escapeHtml(c.id)}">${escapeHtml(c.class_name)}</option>`).join('');
-  classesLoaded = true;
 }
 
-/* ---------- Liste des élèves ---------- */
 async function loadStudents() {
   const body = $('studentRows');
-  body.innerHTML = '<tr><td colspan="5" class="empty">Chargement…</td></tr>';
+  body.innerHTML = '<tr><td colspan="6" class="empty">Chargement…</td></tr>';
+
   const { data, error } = await supabase
     .from('students')
-    .select('matricule,first_name,last_name,status,class:school_classes(class_name)')
+    .select('id,matricule,first_name,last_name,sex,class_id,school_year,status')
     .order('matricule')
-    .limit(500);
+    .limit(1000);
+
   if (error) {
-    body.innerHTML = '<tr><td colspan="5" class="empty">Impossible de charger la liste.</td></tr>';
-    message('studentMsg', friendlyError(error), 'error');
+    body.innerHTML = '<tr><td colspan="6" class="empty">Impossible de charger la liste.</td></tr>';
+    message('studentMsg', 'Erreur Supabase : ' + error.message, 'error');
     return;
   }
+
   allStudents = data || [];
   renderStudents();
-  message('studentMsg', `${allStudents.length} fiche(s) chargée(s).`, 'ok');
-}
-
-function className(s) {
-  const c = Array.isArray(s.class) ? s.class[0] : s.class;
-  return (c && c.class_name) || '';
+  message('studentMsg', `${allStudents.length} élève(s) chargé(s).`, 'ok');
 }
 
 function renderStudents() {
-  const q = $('studentSearch').value.toLowerCase().trim();
-  const rows = allStudents.filter(s =>
-    [s.matricule, s.first_name, s.last_name, statusLabel(s.status), className(s)]
-      .some(v => (v || '').toLowerCase().includes(q))
-  );
-  $('studentRows').innerHTML = rows.length
-    ? rows.map(s => `<tr><td>${escapeHtml(s.matricule || '—')}</td><td>${escapeHtml(s.first_name || '')}</td><td>${escapeHtml(s.last_name || '')}</td><td>${escapeHtml(className(s) || '—')}</td><td>${escapeHtml(statusLabel(s.status))}</td></tr>`).join('')
-    : '<tr><td colspan="5" class="empty">Aucun élève trouvé. La base peut être encore vide.</td></tr>';
-}
-$('studentSearch').addEventListener('input', renderStudents);
+  const query = $('studentSearch').value.toLowerCase().trim();
 
-/* ---------- Inscription d'un élève ---------- */
-$('toggleEnrollBtn').addEventListener('click', () => {
-  const body = $('enrollBody');
-  const open = body.classList.toggle('hidden') === false;
-  $('toggleEnrollBtn').textContent = open ? 'Fermer le formulaire' : 'Ouvrir le formulaire';
-  if (open && !classesLoaded) loadClasses();
-});
+  const filtered = allStudents.filter(student => {
+    const schoolClass = allClasses.find(c => String(c.id) === String(student.class_id));
+    const className = schoolClass ? schoolClass.class_name : '';
+    return [
+      student.matricule,
+      student.first_name,
+      student.last_name,
+      student.sex,
+      student.status,
+      className
+    ].some(value => String(value || '').toLowerCase().includes(query));
+  });
 
-function cleanText(v) { return (v || '').replace(/\s+/g, ' ').trim(); }
-
-function readAndValidateForm() {
-  const first_name = cleanText($('fFirstName').value);
-  const last_name = cleanText($('fLastName').value);
-  const sex = $('fSex').value;
-  const birth_date = $('fBirth').value || null;
-  const class_id = $('fClass').value;
-  const school_year = cleanText($('fYear').value);
-  const guardian_name = cleanText($('fGuardian').value) || null;
-  const guardian_phone = cleanText($('fPhone').value) || null;
-  const status = $('fStatus').value;
-
-  if (first_name.length < 2) return { error: 'Le nom est obligatoire (au moins 2 lettres).' };
-  if (last_name.length < 2) return { error: 'Le postnom est obligatoire (au moins 2 lettres).' };
-  if (!['M', 'F'].includes(sex)) return { error: 'Choisissez le sexe.' };
-  if (birth_date) {
-    const d = new Date(birth_date + 'T00:00:00');
-    const today = new Date();
-    if (isNaN(d.getTime()) || d > today) return { error: 'La date de naissance est invalide (elle ne peut pas être dans le futur).' };
-    if (d.getFullYear() < 1990) return { error: 'La date de naissance semble incorrecte. Vérifiez l\'année.' };
-  }
-  if (!class_id) return { error: 'Choisissez une classe.' };
-  const m = /^(\d{4})-(\d{4})$/.exec(school_year);
-  if (!m || Number(m[2]) !== Number(m[1]) + 1) return { error: "L'année scolaire doit avoir la forme 2026-2027." };
-  if (guardian_phone && !/^[+0-9][0-9 ()\-]{5,19}$/.test(guardian_phone)) {
-    return { error: 'Le numéro de téléphone est invalide (chiffres, espaces et + uniquement).' };
-  }
-  if (!['Actif', 'Inactif', 'Transfere', 'Diplome'].includes(status)) return { error: 'Statut invalide.' };
-
-  return {
-    payload: {
-      first_name, last_name, sex, birth_date,
-      class_id: Number(class_id), school_year,
-      guardian_name, guardian_phone, status
-    }
-  };
+  $('studentRows').innerHTML = filtered.length
+    ? filtered.map(student => {
+        const schoolClass = allClasses.find(c => String(c.id) === String(student.class_id));
+        const className = schoolClass ? schoolClass.class_name : '—';
+        return `<tr>
+          <td>${escapeHtml(student.matricule || '—')}</td>
+          <td>${escapeHtml(student.first_name || '')}</td>
+          <td>${escapeHtml(student.last_name || '')}</td>
+          <td>${escapeHtml(className)}</td>
+          <td>${escapeHtml(student.sex || '—')}</td>
+          <td>${escapeHtml(student.status || '—')}</td>
+        </tr>`;
+      }).join('')
+    : '<tr><td colspan="6" class="empty">Aucun élève trouvé.</td></tr>';
 }
 
-async function findPossibleDuplicate(p) {
-  const esc = v => v.replace(/[\\%_]/g, '\\$&');
-  let q = supabase.from('students').select('matricule,first_name,last_name')
-    .ilike('first_name', esc(p.first_name))
-    .ilike('last_name', esc(p.last_name));
-  q = p.birth_date ? q.eq('birth_date', p.birth_date) : q.is('birth_date', null);
-  const { data, error } = await q.limit(1);
+function escapeHtml(value) {
+  return String(value).replace(/[&<>"']/g, char => ({
+    '&': '&amp;',
+    '<': '&lt;',
+    '>': '&gt;',
+    '"': '&quot;',
+    "'": '&#39;'
+  })[char]);
+}
+
+async function generateMatricule() {
+  const { data, error } = await supabase
+    .from('students')
+    .select('matricule')
+    .limit(10000);
+
   if (error) throw error;
-  return (data && data[0]) || null;
+
+  let highest = 0;
+  (data || []).forEach(student => {
+    const match = String(student.matricule || '').match(/^ELV-(\d+)$/i);
+    if (match) highest = Math.max(highest, Number(match[1]));
+  });
+
+  return 'ELV-' + String(highest + 1).padStart(4, '0');
 }
 
-$('enrollForm').addEventListener('submit', async e => {
-  e.preventDefault();
-  if (currentRole !== 'admin') {
-    message('enrollMsg', "Seul l'administrateur peut inscrire un élève.", 'error');
-    return;
-  }
-  const btn = $('enrollBtn');
-  if (btn.disabled) return;
-  const result = readAndValidateForm();
-  if (result.error) { message('enrollMsg', result.error, 'error'); return; }
+$('studentForm').addEventListener('submit', async event => {
+  event.preventDefault();
 
-  btn.disabled = true;
-  message('enrollMsg', 'Enregistrement en cours…');
+  const button = $('saveStudentBtn');
+  button.disabled = true;
+  message('studentFormMsg', 'Enregistrement en cours…');
+
   try {
-    const dup = await findPossibleDuplicate(result.payload);
-    if (dup) {
-      const go = confirm(`Un élève avec le même nom et la même date de naissance existe déjà (${dup.matricule}). Voulez-vous quand même enregistrer cette nouvelle fiche ?`);
-      if (!go) { message('enrollMsg', 'Inscription annulée : doublon possible.', 'error'); return; }
-    }
-    const { data, error } = await supabase.from('students').insert(result.payload).select('matricule').single();
+    const classId = $('classId').value;
+    if (!classId) throw new Error('Choisissez une classe avant de continuer.');
+
+    const matricule = await generateMatricule();
+
+    const student = {
+      matricule,
+      first_name: $('firstName').value.trim(),
+      last_name: $('lastName').value.trim(),
+      sex: $('sex').value,
+      birth_date: $('birthDate').value || null,
+      class_id: Number(classId),
+      school_year: $('schoolYear').value.trim(),
+      guardian_name: $('guardianName').value.trim() || null,
+      guardian_phone: $('guardianPhone').value.trim() || null,
+      status: $('studentStatus').value
+    };
+
+    const { error } = await supabase.from('students').insert(student);
     if (error) throw error;
-    message('enrollMsg', `Élève enregistré. Matricule attribué : ${data.matricule}`, 'ok');
-    toast(`Élève enregistré : ${data.matricule}`);
-    $('enrollForm').reset();
-    $('fYear').value = '2026-2027';
-    $('fStatus').value = 'Actif';
-    try { await loadStudents(); await refreshSummary(); }
-    catch (refreshErr) { message('studentMsg', "L'élève est enregistré, mais l'actualisation a échoué : " + friendlyError(refreshErr), 'error'); }
-  } catch (err) {
-    message('enrollMsg', friendlyError(err), 'error');
+
+    message('studentFormMsg', `Élève enregistré avec succès. Matricule : ${matricule}`, 'ok');
+    toast('Inscription enregistrée : ' + matricule);
+
+    $('studentForm').reset();
+    $('schoolYear').value = '2026-2027';
+    $('studentStatus').value = 'Actif';
+
+    await Promise.all([loadStudents(), refreshSummary()]);
+  } catch (error) {
+    message('studentFormMsg', error.message || "L'inscription a échoué.", 'error');
   } finally {
-    btn.disabled = false;
+    button.disabled = false;
   }
 });
 
-/* ---------- Connexion / déconnexion ---------- */
-async function startSession(user) {
-  await checkProfile(user);
-  showApp();
-  await refreshSummary();
-}
+$('studentSearch').addEventListener('input', renderStudents);
+$('refreshStudentsBtn').addEventListener('click', async () => {
+  await loadClasses();
+  await loadStudents();
+});
 
-$('loginForm').addEventListener('submit', async e => {
-  e.preventDefault();
-  const btn = $('loginBtn');
-  btn.disabled = true;
+$('loginForm').addEventListener('submit', async event => {
+  event.preventDefault();
+
+  const button = $('loginBtn');
+  button.disabled = true;
   message('loginMsg', 'Connexion en cours…');
+
   try {
-    const { error } = await supabase.auth.signInWithPassword({ email: $('email').value.trim(), password: $('password').value });
+    const { error } = await supabase.auth.signInWithPassword({
+      email: $('email').value.trim(),
+      password: $('password').value
+    });
     if (error) throw error;
+
     const { data: { user } } = await supabase.auth.getUser();
-    await startSession(user);
-    navigate('dashboard');
-  } catch (err) {
+    if (!user) throw new Error('Utilisateur non trouvé.');
+
+    await checkProfile(user);
+    showApp();
+    await refreshSummary();
+  } catch (error) {
     await supabase.auth.signOut();
-    message('loginMsg', err.message || 'Échec de connexion. Vérifiez les informations et les règles de sécurité.', 'error');
+    message('loginMsg', error.message || 'Échec de connexion.', 'error');
   } finally {
-    btn.disabled = false;
+    button.disabled = false;
   }
 });
 
@@ -517,19 +591,6 @@ $('logoutBtn').addEventListener('click', async () => {
 supabase.auth.onAuthStateChange((event, session) => {
   if (event === 'SIGNED_OUT' && !session) showLogin();
 });
-
-/* ---------- Reprise de session au rechargement ---------- */
-(async () => {
-  try {
-    const { data: { session } } = await supabase.auth.getSession();
-    if (session) {
-      await startSession(session.user);
-    }
-  } catch (err) {
-    await supabase.auth.signOut();
-    message('loginMsg', err.message || 'Session expirée. Reconnectez-vous.', 'error');
-  }
-})();
 </script>
 </body>
 </html>
