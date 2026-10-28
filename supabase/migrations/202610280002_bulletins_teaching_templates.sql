@@ -196,3 +196,15 @@ DROP POLICY IF EXISTS class_option_assignments_admin_update_restrictive ON publi
 CREATE POLICY class_option_assignments_admin_update_restrictive
 ON public.class_option_assignments AS RESTRICTIVE FOR UPDATE TO authenticated
 USING (public.is_school_admin()) WITH CHECK (public.is_school_admin());
+
+
+-- 7) L'administrateur peut attribuer les rôles pédagogiques depuis l'interface.
+ALTER TABLE public.profiles ENABLE ROW LEVEL SECURITY;
+DROP POLICY IF EXISTS profiles_admin_update_roles ON public.profiles;
+CREATE POLICY profiles_admin_update_roles
+ON public.profiles FOR UPDATE TO authenticated
+USING (public.is_school_admin()) WITH CHECK (public.is_school_admin());
+DROP POLICY IF EXISTS profiles_admin_update_roles_restrictive ON public.profiles;
+CREATE POLICY profiles_admin_update_roles_restrictive
+ON public.profiles AS RESTRICTIVE FOR UPDATE TO authenticated
+USING (public.is_school_admin()) WITH CHECK (public.is_school_admin());
