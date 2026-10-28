@@ -199,6 +199,15 @@ for insert to authenticated with check (
   and (
     user_id=(select auth.uid())
     or exists(select 1 from public.profiles p where p.user_id=(select auth.uid()) and p.role='admin')
+    or (
+      notification_type='message'
+      and link_type='private_conversation'
+      and exists(select 1 from public.private_conversations c
+        where c.id=link_id
+          and ((select auth.uid())=c.participant_one or (select auth.uid())=c.participant_two)
+          and user_id in (c.participant_one,c.participant_two)
+          and user_id <> (select auth.uid()))
+    )
   )
 );
 drop policy if exists "notifications own update" on public.notifications;
@@ -232,6 +241,13 @@ for insert to authenticated with check (
   and (
     (split_part(name,'/',1)='internal' and split_part(name,'/',2)=(select auth.uid())::text)
     or (
+      split_part(name,'/',1)='visitor'
+      and split_part(name,'/',3)=(select auth.uid())::text
+      and (select auth.jwt()->>'is_anonymous')='true'
+      and exists(select 1 from public.chat_conversations c
+        where c.id::text=split_part(name,'/',2) and c.created_by=(select auth.uid()))
+    )
+    or (
       split_part(name,'/',1)='private'
       and split_part(name,'/',3)=(select auth.uid())::text
       and exists(select 1 from public.private_conversations c
@@ -247,6 +263,12 @@ for select to authenticated using (
   and public.chat_is_staff()
   and (
     split_part(name,'/',1)='internal'
+    or (
+      split_part(name,'/',1)='visitor'
+      and (select auth.jwt()->>'is_anonymous')='true'
+      and exists(select 1 from public.chat_conversations c
+        where c.id::text=split_part(name,'/',2) and c.created_by=(select auth.uid()))
+    )
     or (
       split_part(name,'/',1)='private'
       and exists(select 1 from public.private_conversations c
