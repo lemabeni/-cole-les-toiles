@@ -82,6 +82,11 @@ create table if not exists public.user_presence (
   presence_state text not null default 'online' check (presence_state in ('online','away','offline'))
 );
 
+-- Directory for signed-in school accounts; anonymous visitors cannot browse staff profiles.
+drop policy if exists "profiles communication directory" on public.profiles;
+create policy "profiles communication directory" on public.profiles
+for select to authenticated using ((select auth.jwt()->>'is_anonymous') is distinct from 'true');
+
 alter table public.announcements enable row level security;
 alter table public.announcement_reads enable row level security;
 alter table public.private_conversations enable row level security;
@@ -237,22 +242,26 @@ drop policy if exists "chat attachments staff upload" on storage.objects;
 create policy "chat attachments staff upload" on storage.objects
 for insert to authenticated with check (
   bucket_id='chat-attachments'
-  and public.chat_is_staff()
   and (
-    (split_part(name,'/',1)='internal' and split_part(name,'/',2)=(select auth.uid())::text)
+    (
+      public.chat_is_staff()
+      and (
+        (split_part(name,'/',1)='internal' and split_part(name,'/',2)=(select auth.uid())::text)
+        or (
+          split_part(name,'/',1)='private'
+          and split_part(name,'/',3)=(select auth.uid())::text
+          and exists(select 1 from public.private_conversations c
+            where c.id::text=split_part(name,'/',2)
+              and ((select auth.uid())=c.participant_one or (select auth.uid())=c.participant_two))
+        )
+      )
+    )
     or (
       split_part(name,'/',1)='visitor'
       and split_part(name,'/',3)=(select auth.uid())::text
       and (select auth.jwt()->>'is_anonymous')='true'
       and exists(select 1 from public.chat_conversations c
         where c.id::text=split_part(name,'/',2) and c.created_by=(select auth.uid()))
-    )
-    or (
-      split_part(name,'/',1)='private'
-      and split_part(name,'/',3)=(select auth.uid())::text
-      and exists(select 1 from public.private_conversations c
-        where c.id::text=split_part(name,'/',2)
-          and ((select auth.uid())=c.participant_one or (select auth.uid())=c.participant_two))
     )
   )
 );
@@ -260,20 +269,24 @@ drop policy if exists "chat attachments authorized read" on storage.objects;
 create policy "chat attachments authorized read" on storage.objects
 for select to authenticated using (
   bucket_id='chat-attachments'
-  and public.chat_is_staff()
   and (
-    split_part(name,'/',1)='internal'
+    (
+      public.chat_is_staff()
+      and (
+        split_part(name,'/',1)='internal'
+        or (
+          split_part(name,'/',1)='private'
+          and exists(select 1 from public.private_conversations c
+            where c.id::text=split_part(name,'/',2)
+              and ((select auth.uid())=c.participant_one or (select auth.uid())=c.participant_two))
+        )
+      )
+    )
     or (
       split_part(name,'/',1)='visitor'
       and (select auth.jwt()->>'is_anonymous')='true'
       and exists(select 1 from public.chat_conversations c
         where c.id::text=split_part(name,'/',2) and c.created_by=(select auth.uid()))
-    )
-    or (
-      split_part(name,'/',1)='private'
-      and exists(select 1 from public.private_conversations c
-        where c.id::text=split_part(name,'/',2)
-          and ((select auth.uid())=c.participant_one or (select auth.uid())=c.participant_two))
     )
   )
 );
