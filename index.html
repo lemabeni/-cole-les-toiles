@@ -146,9 +146,9 @@ $('schoolSettingsForm').addEventListener('submit',async e=>{e.preventDefault();i
 /* Importation CSV administrateur : analyse locale, aperçu, validation puis insertion. */
 const csvPending={students:null,staff:null,subjects:null};
 const csvModels={
- students:{filename:'modele_eleves.csv',content:'first_name,last_name,sex,birth_date,class_name,school_year,guardian_name,guardian_phone,status\nAmina,Ilunga,F,2012-04-15,7e année A,2026-2027,Marie Ilunga,+243000000000,Actif\n'},
- staff:{filename:'modele_personnel.csv',content:'first_name,last_name,role,phone,status\nJean,Kasongo,Professeur,+243000000000,Actif\n'},
- subjects:{filename:'modele_matieres.csv',content:'subject_name,class_level,section,option_name,weekly_hours\nMathématiques,1re Scientifique,Humanités,Scientifique,5\n'}
+ students:{filename:'modele_eleves.csv',content:'first_name,last_name,sex,birth_date,class_name,school_year,guardian_name,guardian_phone,status\n'},
+ staff:{filename:'modele_personnel.csv',content:'first_name,last_name,role,phone,status\n'},
+ subjects:{filename:'modele_matieres.csv',content:'subject_name,class_level,section,option_name,weekly_hours\n'}
 };
 function csvDownloadTemplate(type){requireAdmin();const m=csvModels[type];if(!m)return;const blob=new Blob(['\uFEFF'+m.content],{type:'text/csv;charset=utf-8;'});const url=URL.createObjectURL(blob);const a=document.createElement('a');a.href=url;a.download=m.filename;document.body.appendChild(a);a.click();a.remove();URL.revokeObjectURL(url)}
 function csvParse(text){const input=String(text||'').replace(/^\uFEFF/,'');const firstLine=input.split(/\r?\n/,1)[0]||'';const candidates=[',',';','\t'];const delimiter=candidates.sort((a,b)=>firstLine.split(b).length-firstLine.split(a).length)[0];const rows=[];let row=[],cell='',quoted=false;for(let i=0;i<input.length;i++){const c=input[i];if(c==='"'&&quoted&&input[i+1]==='"'){cell+='"';i++}else if(c==='"'){quoted=!quoted}else if(c===delimiter&&!quoted){row.push(cell.trim());cell=''}else if((c==='\n'||c==='\r')&&!quoted){if(c==='\r'&&input[i+1]==='\n')i++;row.push(cell.trim());if(row.some(v=>v!==''))rows.push(row);row=[];cell=''}else{cell+=c}}if(cell!==''||row.length){row.push(cell.trim());if(row.some(v=>v!==''))rows.push(row)}if(!rows.length)throw new Error('Le fichier est vide.');const headers=rows.shift().map(csvHeader);if(headers.some(h=>!h))throw new Error('La première ligne contient un titre de colonne vide.');return rows.map((values,index)=>{const obj={_line:index+2};headers.forEach((h,i)=>obj[h]=(values[i]||'').trim());return obj})}
