@@ -184,3 +184,15 @@ DROP POLICY IF EXISTS school_classes_admin_update_restrictive ON public.school_c
 CREATE POLICY school_classes_admin_update_restrictive
 ON public.school_classes AS RESTRICTIVE FOR UPDATE TO authenticated
 USING (public.is_school_admin()) WITH CHECK (public.is_school_admin());
+
+
+-- 6) Autoriser l'administrateur à propager les renommages d'options.
+ALTER TABLE public.class_option_assignments ENABLE ROW LEVEL SECURITY;
+DROP POLICY IF EXISTS class_option_assignments_admin_update ON public.class_option_assignments;
+CREATE POLICY class_option_assignments_admin_update
+ON public.class_option_assignments FOR UPDATE TO authenticated
+USING (public.is_school_admin()) WITH CHECK (public.is_school_admin());
+DROP POLICY IF EXISTS class_option_assignments_admin_update_restrictive ON public.class_option_assignments;
+CREATE POLICY class_option_assignments_admin_update_restrictive
+ON public.class_option_assignments AS RESTRICTIVE FOR UPDATE TO authenticated
+USING (public.is_school_admin()) WITH CHECK (public.is_school_admin());
