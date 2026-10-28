@@ -83,6 +83,7 @@ create table if not exists public.user_presence (
 );
 
 -- Directory for signed-in school accounts; anonymous visitors cannot browse staff profiles.
+alter table public.profiles enable row level security;
 drop policy if exists "profiles communication directory" on public.profiles;
 create policy "profiles communication directory" on public.profiles
 for select to authenticated using ((select auth.jwt()->>'is_anonymous') is distinct from 'true');
