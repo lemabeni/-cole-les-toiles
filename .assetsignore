@@ -1,0 +1,14 @@
+# Fichiers internes du dépôt Git
+**/.git
+**/.git/**
+**/.wrangler
+**/.wrangler/**
+
+# Migrations SQL : conservées dans Git, mais non publiées comme fichiers du site
+supabase/migrations/**
+
+# Fichiers de documentation et de configuration non destinés aux visiteurs
+README.md
+.gitignore
+wrangler.jsonc
+.assetsignore
