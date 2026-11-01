@@ -276,6 +276,9 @@ td.empty.loading{display:table-cell}
 .printable-report table{min-width:0}
 .printable-report td,.printable-report th{font-size:var(--fs-xs)}
 .printable-report p{color:#222}
+.bulletin-signatures{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:34px;text-align:center;break-inside:avoid}
+.bulletin-signatures p{font-size:12px;color:#222}
+@media(max-width:600px){.bulletin-signatures{gap:12px}}
 @media print{
   body *{visibility:hidden!important}
   .receipt,.receipt *,.printable-report,.printable-report *{visibility:visible!important}
