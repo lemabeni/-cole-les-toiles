@@ -1,1 +1,2899 @@
-
+{
+ "version": 1,
+ "source": "Bulletins officiels IGE/P.S. — année scolaire 2024-2025 (PDF fourni par l’école)",
+ "models": [
+  {
+   "id": "P12",
+   "code": "IGE/P.S/004",
+   "page_pdf": 1,
+   "title": "Bulletin de l'élève — Degré élémentaire (1re, 2e année)",
+   "regime": "trimestre",
+   "classes": [
+    "^(1re|2e) ann[ée]e"
+   ],
+   "domains": [
+    {
+     "name": "Domaine des langues",
+     "groups": [
+      {
+       "name": "Langues congolaises",
+       "branches": [
+        {
+         "name": "Expression orale",
+         "p": 20
+        },
+        {
+         "name": "Expression écrite",
+         "p": 20
+        }
+       ]
+      },
+      {
+       "name": "Français",
+       "branches": [
+        {
+         "name": "Vocabulaire",
+         "p": 10
+        },
+        {
+         "name": "Expression orale (Français)",
+         "p": 20,
+         "alias_of": "Expression orale"
+        }
+       ]
+      },
+      {
+       "name": "Lecture-écriture en langues congolaises",
+       "branches": [
+        {
+         "name": "Lecture-écriture en langues congolaises",
+         "p": 30
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "name": "Domaine des mathématiques, sciences et technologie",
+     "groups": [
+      {
+       "name": "Mathématiques",
+       "branches": [
+        {
+         "name": "Mesures des grandeurs",
+         "p": 10
+        },
+        {
+         "name": "Formes géométriques",
+         "p": 10
+        },
+        {
+         "name": "Numération",
+         "p": 20
+        },
+        {
+         "name": "Opérations",
+         "p": 20
+        },
+        {
+         "name": "Problèmes",
+         "p": 20
+        }
+       ]
+      },
+      {
+       "name": "Sciences",
+       "branches": [
+        {
+         "name": "Sciences d’éveil",
+         "p": 20
+        }
+       ]
+      },
+      {
+       "name": "Technologie",
+       "branches": [
+        {
+         "name": "Technologie",
+         "p": 10
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "name": "Domaine de l’univers social et environnement",
+     "groups": [
+      {
+       "name": null,
+       "branches": [
+        {
+         "name": "Éd. civ. & morale",
+         "p": 10
+        },
+        {
+         "name": "Éd. santé & env.",
+         "p": 10
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "name": "Domaine des arts",
+     "groups": [
+      {
+       "name": "Éducation artistique",
+       "branches": [
+        {
+         "name": "Arts plastiques",
+         "p": 10
+        },
+        {
+         "name": "Arts dramatiques",
+         "p": 10
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "name": "Domaine du développement personnel",
+     "groups": [
+      {
+       "name": null,
+       "branches": [
+        {
+         "name": "Ed. phys. & sportive",
+         "p": 10
+        },
+        {
+         "name": "Init. Trav. Prod.",
+         "p": 10
+        },
+        {
+         "name": "Religion",
+         "p": 10,
+         "optional": true
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "finalBlock": null,
+   "total_general": 3360
+  },
+  {
+   "id": "P34",
+   "code": "IGE/P.S/005",
+   "page_pdf": 3,
+   "title": "Bulletin de l'élève — Degré moyen (3e, 4e année)",
+   "regime": "trimestre",
+   "classes": [
+    "^(3e|4e) ann[ée]e"
+   ],
+   "domains": [
+    {
+     "name": "Domaine des langues",
+     "groups": [
+      {
+       "name": "Langues congolaises",
+       "branches": [
+        {
+         "name": "Exp. Orale & Vocabulaire",
+         "p": 10
+        },
+        {
+         "name": "Grammaire & Conjug.",
+         "p": 10
+        },
+        {
+         "name": "Orth. & Rédaction",
+         "p": 5
+        }
+       ]
+      },
+      {
+       "name": "Français",
+       "branches": [
+        {
+         "name": "Expr. orale – Récit. –Voc.",
+         "p": 10
+        },
+        {
+         "name": "Orth. phras. Ecrit. & réd.",
+         "p": 10
+        },
+        {
+         "name": "Gram. – Conj. - Analyse",
+         "p": 15
+        }
+       ]
+      },
+      {
+       "name": "Lecture-écriture en langues congolaises",
+       "branches": [
+        {
+         "name": "Lecture-écriture en langues congolaises",
+         "p": 30
+        }
+       ]
+      },
+      {
+       "name": "Lecture-écriture en langue française",
+       "branches": [
+        {
+         "name": "Lecture-écriture en langue française",
+         "p": 30
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "name": "Domaine des mathématiques, sciences et technologie",
+     "groups": [
+      {
+       "name": "Mathématiques",
+       "branches": [
+        {
+         "name": "Numération",
+         "p": 10
+        },
+        {
+         "name": "Opérations",
+         "p": 10
+        },
+        {
+         "name": "Mesures des Grandeurs",
+         "p": 10
+        },
+        {
+         "name": "Formes Géométriques",
+         "p": 10
+        },
+        {
+         "name": "Problèmes",
+         "p": 20
+        }
+       ]
+      },
+      {
+       "name": "Sciences",
+       "branches": [
+        {
+         "name": "Zoologie – botanique & Info.",
+         "p": 10
+        }
+       ]
+      },
+      {
+       "name": "Technologie",
+       "branches": [
+        {
+         "name": "Technologie",
+         "p": 20
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "name": "Domaine de l’univers social et environnement",
+     "groups": [
+      {
+       "name": null,
+       "branches": [
+        {
+         "name": "Education civ. & morale",
+         "p": 10
+        },
+        {
+         "name": "Education santé & env.",
+         "p": 10
+        },
+        {
+         "name": "Géographie",
+         "p": 10
+        },
+        {
+         "name": "Histoire",
+         "p": 10
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "name": "Domaine des arts",
+     "groups": [
+      {
+       "name": "Éducation artistique",
+       "branches": [
+        {
+         "name": "Arts plastiques",
+         "p": 10
+        },
+        {
+         "name": "Arts dramatiques",
+         "p": 10
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "name": "Domaine du développement personnel",
+     "groups": [
+      {
+       "name": null,
+       "branches": [
+        {
+         "name": "Ed. phys. & sportive",
+         "p": 10
+        },
+        {
+         "name": "Init. Trav. Prod.",
+         "p": 10
+        },
+        {
+         "name": "Religion",
+         "p": 10,
+         "optional": true
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "total_general": 3600
+  },
+  {
+   "id": "P5",
+   "code": "IGE/P.S/006",
+   "page_pdf": 4,
+   "title": "Bulletin de l'élève — Degré terminal (5e année)",
+   "regime": "trimestre",
+   "classes": [
+    "^5e ann[ée]e"
+   ],
+   "domains": [
+    {
+     "name": "Domaine des langues",
+     "groups": [
+      {
+       "name": "Langues congolaises",
+       "branches": [
+        {
+         "name": "Gram. & Conj.",
+         "p": 10
+        },
+        {
+         "name": "Expr. Orale & Vocab.",
+         "p": 10
+        },
+        {
+         "name": "Orth. & rédaction",
+         "p": 10
+        }
+       ]
+      },
+      {
+       "name": "Français",
+       "branches": [
+        {
+         "name": "Exp. Oral & Vocab.",
+         "p": 10
+        },
+        {
+         "name": "Orthographe",
+         "p": 10
+        },
+        {
+         "name": "Rédaction",
+         "p": 10
+        },
+        {
+         "name": "Gram. Conj. Analyse",
+         "p": 20
+        }
+       ]
+      },
+      {
+       "name": "Lect. - ecriture en langues congolaises",
+       "branches": [
+        {
+         "name": "Lect. - ecriture en langues congolaises",
+         "p": 20
+        }
+       ]
+      },
+      {
+       "name": "Lect. - ecriture en langue française",
+       "branches": [
+        {
+         "name": "Lect. - ecriture en langue française",
+         "p": 20
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "name": "Domaine des mathématiques, sciences et technologie",
+     "groups": [
+      {
+       "name": "Mathématiques",
+       "branches": [
+        {
+         "name": "Numération",
+         "p": 10
+        },
+        {
+         "name": "Opérations",
+         "p": 10
+        },
+        {
+         "name": "Mesures des grandeurs",
+         "p": 10
+        },
+        {
+         "name": "Formes géométriques",
+         "p": 10
+        },
+        {
+         "name": "Problèmes",
+         "p": 20
+        }
+       ]
+      },
+      {
+       "name": "Sciences",
+       "branches": [
+        {
+         "name": "Phys.- zoolo. - Info.",
+         "p": 10
+        },
+        {
+         "name": "Anatomie –botanique",
+         "p": 20
+        }
+       ]
+      },
+      {
+       "name": "Technologie",
+       "branches": [
+        {
+         "name": "Technologie",
+         "p": 10
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "name": "Domaine de l’univers social et environnement",
+     "groups": [
+      {
+       "name": null,
+       "branches": [
+        {
+         "name": "Ed. civ & morale",
+         "p": 10
+        },
+        {
+         "name": "Ed. santé & env.",
+         "p": 10
+        },
+        {
+         "name": "Géographie",
+         "p": 10
+        },
+        {
+         "name": "Histoire",
+         "p": 10
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "name": "Domaine des arts",
+     "groups": [
+      {
+       "name": "Éducation artistique",
+       "branches": [
+        {
+         "name": "Arts Plastiques",
+         "p": 10
+        },
+        {
+         "name": "Arts Dramatiques",
+         "p": 10
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "name": "Domaine du développement personnel",
+     "groups": [
+      {
+       "name": "Éducation artistique",
+       "branches": [
+        {
+         "name": "Init. Trav. Prod.",
+         "p": 10
+        },
+        {
+         "name": "Ed. phys. & sportive",
+         "p": 10
+        },
+        {
+         "name": "Religion",
+         "p": 10,
+         "optional": true
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "total_general": 3720
+  },
+  {
+   "id": "P6",
+   "code": "IGE/P.S/006",
+   "page_pdf": 5,
+   "title": "Bulletin de l'élève — Degré terminal (6e année)",
+   "regime": "trimestre",
+   "classes": [
+    "^6e ann[ée]e"
+   ],
+   "domains": [
+    {
+     "name": "Domaine des langues",
+     "groups": [
+      {
+       "name": "Langues congolaises",
+       "branches": [
+        {
+         "name": "Gram. & Conj.",
+         "p": 10
+        },
+        {
+         "name": "Exp. Orale & Vocab.",
+         "p": 10
+        },
+        {
+         "name": "Orth. & rédaction",
+         "p": 10
+        }
+       ]
+      },
+      {
+       "name": "Français",
+       "branches": [
+        {
+         "name": "Exp. Oral & Vocab.",
+         "p": 10
+        },
+        {
+         "name": "Orthographe",
+         "p": 10
+        },
+        {
+         "name": "Rédaction",
+         "p": 10
+        },
+        {
+         "name": "Gram. Conj. Analyse",
+         "p": 20
+        }
+       ]
+      },
+      {
+       "name": "Lect. - ecriture en langues congolaises",
+       "branches": [
+        {
+         "name": "Lect. - ecriture en langues congolaises",
+         "p": 20
+        }
+       ]
+      },
+      {
+       "name": "Lect. - ecriture en langue française",
+       "branches": [
+        {
+         "name": "Lect. - ecriture en langue française",
+         "p": 20
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "name": "Domaine des mathématiques, sciences et technologie",
+     "groups": [
+      {
+       "name": "Mathématiques",
+       "branches": [
+        {
+         "name": "Numération",
+         "p": 10
+        },
+        {
+         "name": "Opérations",
+         "p": 10
+        },
+        {
+         "name": "Mesures des grandeurs",
+         "p": 10
+        },
+        {
+         "name": "Formes géométriques",
+         "p": 10
+        },
+        {
+         "name": "Problèmes",
+         "p": 20
+        }
+       ]
+      },
+      {
+       "name": "Sciences",
+       "branches": [
+        {
+         "name": "Phys.- zoolo. - Info.",
+         "p": 10
+        },
+        {
+         "name": "Anatomie –botanique",
+         "p": 20
+        }
+       ]
+      },
+      {
+       "name": "Technologie",
+       "branches": [
+        {
+         "name": "Technologie",
+         "p": 10
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "name": "Domaine de l’univers social et environnement",
+     "groups": [
+      {
+       "name": null,
+       "branches": [
+        {
+         "name": "Ed. civ. & morale",
+         "p": 10
+        },
+        {
+         "name": "Ed. santé & env.",
+         "p": 10
+        },
+        {
+         "name": "Géographie",
+         "p": 10
+        },
+        {
+         "name": "Histoire",
+         "p": 10
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "name": "Domaine des arts",
+     "groups": [
+      {
+       "name": "Éducation artistique",
+       "branches": [
+        {
+         "name": "Arts Plastiques",
+         "p": 10
+        },
+        {
+         "name": "Arts Dramatiques",
+         "p": 10
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "name": "Domaine du développement personnel",
+     "groups": [
+      {
+       "name": "Éducation artistique",
+       "branches": [
+        {
+         "name": "Init. Trav. Prod.",
+         "p": 10
+        },
+        {
+         "name": "Ed. phys. & sportive",
+         "p": 10
+        },
+        {
+         "name": "Religion",
+         "p": 10,
+         "optional": true
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "finalBlock": {
+    "title": "Résultat final",
+    "rows": [
+     [
+      "Moyenne école",
+      50
+     ],
+     [
+      "ENAFEP",
+      50
+     ],
+     [
+      "Total",
+      100
+     ]
+    ]
+   },
+   "total_general": 3720
+  },
+  {
+   "id": "EB7",
+   "code": "IGE/P.S./007",
+   "page_pdf": 7,
+   "title": "Bulletin de la 7e année — Cycle terminal de l'éducation de base (CTEB)",
+   "regime": "semestre",
+   "classes": [
+    "^7e ann[ée]e"
+   ],
+   "domains": [
+    {
+     "name": "Domaine des sciences",
+     "groups": [
+      {
+       "name": "Mathématiques",
+       "branches": [
+        {
+         "name": "Arithmétique",
+         "p": 10
+        },
+        {
+         "name": "Statistique",
+         "p": 10
+        },
+        {
+         "name": "Géométrie",
+         "p": 20
+        },
+        {
+         "name": "Algèbre",
+         "p": 40
+        }
+       ]
+      },
+      {
+       "name": "Sciences de la Vie et de la Terre",
+       "branches": [
+        {
+         "name": "Anatomie",
+         "p": 10
+        },
+        {
+         "name": "Botanique",
+         "p": 10
+        },
+        {
+         "name": "Zoologie",
+         "p": 10
+        }
+       ]
+      },
+      {
+       "name": "Sciences Physiques, Technologie et Technologies de l’Information et de la communication (TIC)",
+       "branches": [
+        {
+         "name": "Sciences Physiques",
+         "p": 10
+        },
+        {
+         "name": "Technologie",
+         "p": 10
+        },
+        {
+         "name": "Techn. d’Info. & Com (TIC)",
+         "p": 10
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "name": "Domaine des langues",
+     "groups": [
+      {
+       "name": null,
+       "branches": [
+        {
+         "name": "Anglais",
+         "p": 30
+        },
+        {
+         "name": "Français",
+         "p": 70
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "name": "Domaine de l'univers social et environnement",
+     "groups": [
+      {
+       "name": null,
+       "branches": [
+        {
+         "name": "Religion",
+         "p": 20,
+         "optional": true
+        },
+        {
+         "name": "Education à la vie",
+         "p": 20
+        },
+        {
+         "name": "Ed. civique et morale",
+         "p": 20
+        },
+        {
+         "name": "Géographie",
+         "p": 20
+        },
+        {
+         "name": "Histoire",
+         "p": 20
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "name": "Domaine des arts",
+     "groups": [
+      {
+       "name": null,
+       "branches": [
+        {
+         "name": "Dessin",
+         "p": 20
+        },
+        {
+         "name": "Musique",
+         "p": 20
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "name": "Domaine du développement personnel",
+     "groups": [
+      {
+       "name": null,
+       "branches": [
+        {
+         "name": "Educat. Phys. & sport.",
+         "p": 20
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "total_general": 3200
+  },
+  {
+   "id": "EB8",
+   "code": "IGE/P.S./008",
+   "page_pdf": 8,
+   "title": "Bulletin de la 8e année — Cycle terminal de l'éducation de base (CTEB)",
+   "regime": "semestre",
+   "classes": [
+    "^8e ann[ée]e"
+   ],
+   "domains": [
+    {
+     "name": "Domaine des sciences",
+     "groups": [
+      {
+       "name": "Mathématiques",
+       "branches": [
+        {
+         "name": "Arithmétique",
+         "p": 10
+        },
+        {
+         "name": "Statistique",
+         "p": 10
+        },
+        {
+         "name": "Géométrie",
+         "p": 20
+        },
+        {
+         "name": "Algèbre",
+         "p": 40
+        }
+       ]
+      },
+      {
+       "name": "Sciences de la Vie et de la Terre",
+       "branches": [
+        {
+         "name": "Anatomie",
+         "p": 10
+        },
+        {
+         "name": "Botanique",
+         "p": 10
+        },
+        {
+         "name": "Nutrition",
+         "p": 10
+        },
+        {
+         "name": "Zoologie",
+         "p": 20
+        }
+       ]
+      },
+      {
+       "name": "Sciences Physiques, Technologie et Technologies de l’Information et de la communication (TIC)",
+       "branches": [
+        {
+         "name": "Chimie",
+         "p": 10,
+         "optional": true
+        },
+        {
+         "name": "Sciences Physiques",
+         "p": 10
+        },
+        {
+         "name": "Technologie",
+         "p": 10
+        },
+        {
+         "name": "Techn. d’Info. & Com (TIC)",
+         "p": 10
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "name": "Domaine des langues",
+     "groups": [
+      {
+       "name": null,
+       "branches": [
+        {
+         "name": "Anglais",
+         "p": 30
+        },
+        {
+         "name": "Français",
+         "p": 50
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "name": "Domaine de l'univers social et environnement",
+     "groups": [
+      {
+       "name": null,
+       "branches": [
+        {
+         "name": "Religion",
+         "p": 20,
+         "optional": true
+        },
+        {
+         "name": "Education à la vie",
+         "p": 20
+        },
+        {
+         "name": "Ed. civique et morale",
+         "p": 20
+        },
+        {
+         "name": "Histoire",
+         "p": 20
+        },
+        {
+         "name": "Géographie",
+         "p": 30
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "name": "Domaine des arts",
+     "groups": [
+      {
+       "name": null,
+       "branches": [
+        {
+         "name": "Dessin",
+         "p": 20
+        },
+        {
+         "name": "Musique",
+         "p": 20
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "name": "Domaine du développement personnel",
+     "groups": [
+      {
+       "name": null,
+       "branches": [
+        {
+         "name": "Ed. Physique & Sportive",
+         "p": 20
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "finalBlock": {
+    "title": "Résultat final",
+    "rows": [
+     [
+      "Moyenne école",
+      50
+     ],
+     [
+      "TENASOSP",
+      50
+     ],
+     [
+      "Total",
+      100
+     ]
+    ]
+   },
+   "total_general": 3360
+  },
+  {
+   "id": "SC1",
+   "code": "IGE/P.S./012",
+   "page_pdf": 92,
+   "title": "Bulletin de la 1re année des humanités scientifiques",
+   "regime": "semestre",
+   "classes": [
+    "^1re Scientifique"
+   ],
+   "domains": [
+    {
+     "name": "Domaine des sciences",
+     "groups": [
+      {
+       "name": "Mathématiques",
+       "branches": [
+        {
+         "name": "Algèbre, Stat. & Analy.",
+         "p": 40
+        },
+        {
+         "name": "Géometrie et Trigo.",
+         "p": 20
+        },
+        {
+         "name": "Dessin scientifique",
+         "p": 10
+        }
+       ]
+      },
+      {
+       "name": "Sciences de la Vie et de la Terre",
+       "branches": [
+        {
+         "name": "Biologie générale",
+         "p": 20
+        },
+        {
+         "name": "microbiologie",
+         "p": 10
+        },
+        {
+         "name": "Géologie",
+         "p": 10
+        }
+       ]
+      },
+      {
+       "name": "Sciences Physiques, Technologie et TIC",
+       "branches": [
+        {
+         "name": "Tech. d’Info et Com (TIC)",
+         "p": 10
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "name": "Domaine des langues",
+     "groups": [
+      {
+       "name": null,
+       "branches": [
+        {
+         "name": "Français",
+         "p": 50
+        },
+        {
+         "name": "Anglais",
+         "p": 30
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "name": "Domaine de l’univers social et environnement",
+     "groups": [
+      {
+       "name": null,
+       "branches": [
+        {
+         "name": "Ed. civ. & morale",
+         "p": 10
+        },
+        {
+         "name": "Géographie",
+         "p": 20
+        },
+        {
+         "name": "Histoire",
+         "p": 20
+        },
+        {
+         "name": "Education à la vie",
+         "p": 10,
+         "optional": true
+        },
+        {
+         "name": "Sociologie africaine",
+         "p": 20
+        },
+        {
+         "name": "Religion",
+         "p": 10,
+         "optional": true
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "name": "Domaine du développement personnel",
+     "groups": [
+      {
+       "name": null,
+       "branches": [
+        {
+         "name": "Educat. phys. & sport.",
+         "p": 10
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "total_general": 2400
+  },
+  {
+   "id": "SC2",
+   "code": "IGE/P.S./012",
+   "page_pdf": 93,
+   "title": "Bulletin de la 2e année des humanités scientifiques",
+   "regime": "semestre",
+   "classes": [
+    "^2e Scientifique"
+   ],
+   "domains": [
+    {
+     "name": "Domaine des sciences",
+     "groups": [
+      {
+       "name": "Mathématiques",
+       "branches": [
+        {
+         "name": "Algèbre, Stat. & Analy.",
+         "p": 40
+        },
+        {
+         "name": "Géometrie et Trigo.",
+         "p": 20
+        },
+        {
+         "name": "Dessin scientifique",
+         "p": 10
+        }
+       ]
+      },
+      {
+       "name": "Sciences de la Vie et de la Terre",
+       "branches": [
+        {
+         "name": "Biologie générale",
+         "p": 20
+        },
+        {
+         "name": "microbiologie",
+         "p": 10
+        },
+        {
+         "name": "Géologie",
+         "p": 10
+        }
+       ]
+      },
+      {
+       "name": "Sciences Physiques, Technologie et TIC",
+       "branches": [
+        {
+         "name": "Chimie",
+         "p": 30
+        },
+        {
+         "name": "Physique",
+         "p": 30
+        },
+        {
+         "name": "Tech. d’Info et Com (TIC)",
+         "p": 10
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "name": "Domaine des langues",
+     "groups": [
+      {
+       "name": null,
+       "branches": [
+        {
+         "name": "Français",
+         "p": 50
+        },
+        {
+         "name": "Anglais",
+         "p": 30
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "name": "Domaine de l’univers social et environnement",
+     "groups": [
+      {
+       "name": null,
+       "branches": [
+        {
+         "name": "Ed. civ. & morale",
+         "p": 10
+        },
+        {
+         "name": "Géographie",
+         "p": 20
+        },
+        {
+         "name": "Histoire",
+         "p": 20
+        },
+        {
+         "name": "Education à la vie",
+         "p": 10,
+         "optional": true
+        },
+        {
+         "name": "Sociologie africaine",
+         "p": 20
+        },
+        {
+         "name": "Religion",
+         "p": 10,
+         "optional": true
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "name": "Domaine du développement personnel",
+     "groups": [
+      {
+       "name": null,
+       "branches": [
+        {
+         "name": "Educat. phys. & sport.",
+         "p": 10
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "total_general": 2880
+  },
+  {
+   "id": "SC3",
+   "code": "IGE/P.S./012",
+   "page_pdf": 94,
+   "title": "Bulletin de la 3e année des humanités scientifiques",
+   "regime": "semestre",
+   "classes": [
+    "^3e Scientifique"
+   ],
+   "domains": [
+    {
+     "name": "Domaine des sciences",
+     "groups": [
+      {
+       "name": "Mathématiques",
+       "branches": [
+        {
+         "name": "Algèbre, Stat. & Analy.",
+         "p": 30
+        },
+        {
+         "name": "Géometrie",
+         "p": 20
+        },
+        {
+         "name": "Trigo. & Statistiques",
+         "p": 10
+        },
+        {
+         "name": "Dessin scientifique",
+         "p": 10
+        }
+       ]
+      },
+      {
+       "name": "Sciences de la Vie et de la Terre",
+       "branches": [
+        {
+         "name": "Biologie générale",
+         "p": 20
+        },
+        {
+         "name": "Systématique et Jardin.",
+         "p": 10,
+         "verify": "Valeurs imprimées incohérentes sur le bulletin papier (période 20, examen 20, total 40). Retenu : période 10, examen 20, total 40 (cohérent avec le total imprimé). À confirmer."
+        },
+        {
+         "name": "Géologie / Ecologie",
+         "p": 10,
+         "verify": "Valeurs imprimées incohérentes sur le bulletin papier (période 20, examen 20, total 40). Retenu : période 10, examen 20, total 40 (cohérent avec le total imprimé). À confirmer."
+        }
+       ]
+      },
+      {
+       "name": "Sciences Physiques, Technologie et TIC",
+       "branches": [
+        {
+         "name": "Chimie",
+         "p": 30
+        },
+        {
+         "name": "Physique",
+         "p": 30
+        },
+        {
+         "name": "Tech. d’Info et Com (TIC)",
+         "p": 10
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "name": "Domaine des langues",
+     "groups": [
+      {
+       "name": null,
+       "branches": [
+        {
+         "name": "Français",
+         "p": 50
+        },
+        {
+         "name": "Anglais",
+         "p": 30
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "name": "Domaine de l’univers social et environnement",
+     "groups": [
+      {
+       "name": null,
+       "branches": [
+        {
+         "name": "Ed. civ. & morale",
+         "p": 10
+        },
+        {
+         "name": "Géographie",
+         "p": 20
+        },
+        {
+         "name": "Histoire",
+         "p": 20
+        },
+        {
+         "name": "Education à la vie",
+         "p": 10,
+         "optional": true
+        },
+        {
+         "name": "Sociologie africaine",
+         "p": 20
+        },
+        {
+         "name": "Religion",
+         "p": 10,
+         "optional": true
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "name": "Domaine du développement personnel",
+     "groups": [
+      {
+       "name": null,
+       "branches": [
+        {
+         "name": "Educat. phys. & sport.",
+         "p": 10
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "total_general": 2880
+  },
+  {
+   "id": "LP12",
+   "code": "IGE/PS/009",
+   "page_pdf": 48,
+   "title": "Bulletin de la 1re, 2e année Humanités — Latin–Philosophie",
+   "regime": "semestre",
+   "classes": [
+    "^(1re|2e) (Latin|Humanit)"
+   ],
+   "domains": [
+    {
+     "name": null,
+     "groups": [
+      {
+       "name": null,
+       "branches": [
+        {
+         "name": "Religion",
+         "p": 10,
+         "optional": true
+        },
+        {
+         "name": "Ed. civ. & morale",
+         "p": 10
+        },
+        {
+         "name": "Education à la Vie",
+         "p": 10
+        },
+        {
+         "name": "Informatique",
+         "p": 10
+        }
+       ]
+      },
+      {
+       "name": null,
+       "branches": [
+        {
+         "name": "Chimie",
+         "p": 20
+        },
+        {
+         "name": "Education phys. & sport.",
+         "p": 20
+        },
+        {
+         "name": "Géographie",
+         "p": 20
+        },
+        {
+         "name": "Histoire",
+         "p": 20
+        },
+        {
+         "name": "Microbiologie / Bio.",
+         "p": 20,
+         "optional": true
+        },
+        {
+         "name": "Physique",
+         "p": 20
+        },
+        {
+         "name": "Sociologie / Ecopol",
+         "p": 20,
+         "optional": true
+        }
+       ]
+      },
+      {
+       "name": null,
+       "branches": [
+        {
+         "name": "Anglais",
+         "p": 40
+        },
+        {
+         "name": "Mathématiques",
+         "p": 40
+        }
+       ]
+      },
+      {
+       "name": null,
+       "branches": [
+        {
+         "name": "Français",
+         "p": 50
+        },
+        {
+         "name": "Latin",
+         "p": 50
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "total_general": 2880
+  },
+  {
+   "id": "LP3",
+   "code": "IGE/PS/010",
+   "page_pdf": 49,
+   "title": "Bulletin de la 3e année Humanités — Latin–Philosophie",
+   "regime": "semestre",
+   "classes": [
+    "^3e Latin"
+   ],
+   "domains": [
+    {
+     "name": null,
+     "groups": [
+      {
+       "name": null,
+       "branches": [
+        {
+         "name": "Religion",
+         "p": 10,
+         "optional": true
+        },
+        {
+         "name": "Education à la Vie",
+         "p": 10
+        },
+        {
+         "name": "Ed. civ. & morale",
+         "p": 10
+        },
+        {
+         "name": "Informatique",
+         "p": 10
+        }
+       ]
+      },
+      {
+       "name": null,
+       "branches": [
+        {
+         "name": "Biologie",
+         "p": 20
+        },
+        {
+         "name": "Chimie",
+         "p": 20
+        },
+        {
+         "name": "Education phys. & sport.",
+         "p": 20
+        },
+        {
+         "name": "Esthétique",
+         "p": 20
+        },
+        {
+         "name": "Géographie",
+         "p": 20
+        },
+        {
+         "name": "Histoire",
+         "p": 20
+        },
+        {
+         "name": "Mathématiques",
+         "p": 20
+        },
+        {
+         "name": "Physique",
+         "p": 20
+        }
+       ]
+      },
+      {
+       "name": null,
+       "branches": [
+        {
+         "name": "Anglais",
+         "p": 40
+        }
+       ]
+      },
+      {
+       "name": null,
+       "branches": [
+        {
+         "name": "Français",
+         "p": 50
+        },
+        {
+         "name": "Latin",
+         "p": 50
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "total_general": 2720
+  },
+  {
+   "id": "LP4",
+   "code": "IGE/P.S./011",
+   "page_pdf": 50,
+   "title": "Bulletin de la 4e année Humanités — Latin–Philosophie",
+   "regime": "semestre",
+   "classes": [
+    "^4e Latin"
+   ],
+   "domains": [
+    {
+     "name": null,
+     "groups": [
+      {
+       "name": null,
+       "branches": [
+        {
+         "name": "Religion",
+         "p": 10,
+         "optional": true
+        },
+        {
+         "name": "Education à la Vie",
+         "p": 10
+        },
+        {
+         "name": "Ed. civ. & morale",
+         "p": 10
+        },
+        {
+         "name": "Informatique",
+         "p": 10
+        }
+       ]
+      },
+      {
+       "name": null,
+       "branches": [
+        {
+         "name": "Biologie",
+         "p": 20
+        },
+        {
+         "name": "Education phys. & sport.",
+         "p": 20
+        },
+        {
+         "name": "Géographie",
+         "p": 20
+        },
+        {
+         "name": "Histoire",
+         "p": 20
+        },
+        {
+         "name": "Mathématiques",
+         "p": 20
+        },
+        {
+         "name": "Philosophie",
+         "p": 20
+        },
+        {
+         "name": "Physique",
+         "p": 20
+        }
+       ]
+      },
+      {
+       "name": null,
+       "branches": [
+        {
+         "name": "Anglais",
+         "p": 40
+        }
+       ]
+      },
+      {
+       "name": null,
+       "branches": [
+        {
+         "name": "Français",
+         "p": 50
+        },
+        {
+         "name": "Latin",
+         "p": 50
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "finalBlock": {
+    "title": "Examen d'État",
+    "rows": [
+     [
+      "Points obtenus",
+      null
+     ],
+     [
+      "Max",
+      null
+     ],
+     [
+      "%",
+      null
+     ]
+    ]
+   },
+   "total_general": 2560
+  },
+  {
+   "id": "PG1",
+   "code": "IGE/PS./024",
+   "page_pdf": 78,
+   "title": "Bulletin de la 1re année Humanités — Pédagogie générale",
+   "regime": "semestre",
+   "classes": [
+    "^1re P[ée]dagogie"
+   ],
+   "domains": [
+    {
+     "name": null,
+     "groups": [
+      {
+       "name": null,
+       "branches": [
+        {
+         "name": "Religion",
+         "p": 10,
+         "optional": true
+        },
+        {
+         "name": "Education à la Vie",
+         "p": 10
+        },
+        {
+         "name": "Ed. civ. & morale",
+         "p": 10
+        }
+       ]
+      },
+      {
+       "name": null,
+       "branches": [
+        {
+         "name": "Biologie",
+         "p": 20
+        },
+        {
+         "name": "Dessin",
+         "p": 20
+        },
+        {
+         "name": "Education music. / Théâtrale",
+         "p": 20
+        },
+        {
+         "name": "Education phys. & sportive",
+         "p": 20
+        },
+        {
+         "name": "Géographie",
+         "p": 20
+        },
+        {
+         "name": "Histoire",
+         "p": 20
+        },
+        {
+         "name": "Informatique",
+         "p": 20
+        },
+        {
+         "name": "Langues nationales",
+         "p": 20
+        },
+        {
+         "name": "Sociologie africaine",
+         "p": 20
+        },
+        {
+         "name": "Travaux musicale/Ecriture",
+         "p": 20
+        }
+       ]
+      },
+      {
+       "name": null,
+       "branches": [
+        {
+         "name": "Chimie",
+         "p": 40
+        },
+        {
+         "name": "Mathématiques",
+         "p": 40
+        },
+        {
+         "name": "Pédagogie",
+         "p": 40
+        },
+        {
+         "name": "Physique",
+         "p": 40
+        },
+        {
+         "name": "Psychologie",
+         "p": 40
+        }
+       ]
+      },
+      {
+       "name": null,
+       "branches": [
+        {
+         "name": "Anglais",
+         "p": 50
+        },
+        {
+         "name": "Français",
+         "p": 50
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "total_general": 4240
+  },
+  {
+   "id": "PG2",
+   "code": "IGE/PS./025",
+   "page_pdf": 79,
+   "title": "Bulletin de la 2e année Humanités — Pédagogie générale",
+   "regime": "semestre",
+   "classes": [
+    "^2e P[ée]dagogie"
+   ],
+   "domains": [
+    {
+     "name": null,
+     "groups": [
+      {
+       "name": null,
+       "branches": [
+        {
+         "name": "Religion",
+         "p": 10,
+         "optional": true
+        },
+        {
+         "name": "Education à la Vie",
+         "p": 10
+        },
+        {
+         "name": "Ed. civ. & morale",
+         "p": 10
+        }
+       ]
+      },
+      {
+       "name": null,
+       "branches": [
+        {
+         "name": "Chimie",
+         "p": 20
+        },
+        {
+         "name": "Dessin",
+         "p": 20
+        },
+        {
+         "name": "Educat. phys. & sportive",
+         "p": 20
+        },
+        {
+         "name": "Economie politique",
+         "p": 20
+        },
+        {
+         "name": "Educat. music./Théâtrale",
+         "p": 20
+        },
+        {
+         "name": "Géographie",
+         "p": 20
+        },
+        {
+         "name": "Histoire",
+         "p": 20
+        },
+        {
+         "name": "Informatique",
+         "p": 20
+        },
+        {
+         "name": "Langues nationales",
+         "p": 20
+        },
+        {
+         "name": "Microbiologie",
+         "p": 20
+        },
+        {
+         "name": "Physique",
+         "p": 20
+        }
+       ]
+      },
+      {
+       "name": null,
+       "branches": [
+        {
+         "name": "Didactique des disciplines",
+         "p": 40
+        },
+        {
+         "name": "Didactique générale",
+         "p": 40
+        },
+        {
+         "name": "Mathématiques",
+         "p": 40
+        },
+        {
+         "name": "Pédagogie",
+         "p": 40
+        },
+        {
+         "name": "Psychologie",
+         "p": 40
+        },
+        {
+         "name": "Travail manuel / Ecriture",
+         "p": 40
+        }
+       ]
+      },
+      {
+       "name": null,
+       "branches": [
+        {
+         "name": "Anglais",
+         "p": 50
+        },
+        {
+         "name": "Français",
+         "p": 50
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "total_general": 4720
+  },
+  {
+   "id": "PG3",
+   "code": "IGE/PS./026",
+   "page_pdf": 80,
+   "title": "Bulletin de la 3e année Humanités — Pédagogie générale",
+   "regime": "semestre",
+   "classes": [
+    "^3e P[ée]dagogie"
+   ],
+   "domains": [
+    {
+     "name": null,
+     "groups": [
+      {
+       "name": null,
+       "branches": [
+        {
+         "name": "Religion",
+         "p": 10,
+         "optional": true
+        },
+        {
+         "name": "Education à la Vie",
+         "p": 10
+        },
+        {
+         "name": "Ed. civ. & morale",
+         "p": 10
+        },
+        {
+         "name": "Informatique",
+         "p": 10
+        }
+       ]
+      },
+      {
+       "name": null,
+       "branches": [
+        {
+         "name": "Biologie",
+         "p": 20
+        },
+        {
+         "name": "Education music./Théâtrale",
+         "p": 20
+        },
+        {
+         "name": "Education phys. & sportive",
+         "p": 20
+        },
+        {
+         "name": "Esthétique",
+         "p": 20
+        },
+        {
+         "name": "Géographie",
+         "p": 20
+        },
+        {
+         "name": "Histoire",
+         "p": 20
+        },
+        {
+         "name": "Physique",
+         "p": 20
+        }
+       ]
+      },
+      {
+       "name": null,
+       "branches": [
+        {
+         "name": "Anglais",
+         "p": 40
+        },
+        {
+         "name": "Langues nationales",
+         "p": 40
+        },
+        {
+         "name": "Mathématiques",
+         "p": 40
+        }
+       ]
+      },
+      {
+       "name": null,
+       "branches": [
+        {
+         "name": "Français",
+         "p": 50
+        },
+        {
+         "name": "Dessin",
+         "p": 50
+        },
+        {
+         "name": "Didactique des disciplines",
+         "p": 50
+        },
+        {
+         "name": "Didactique générale",
+         "p": 50
+        },
+        {
+         "name": "Pédagogie",
+         "p": 50
+        },
+        {
+         "name": "Psychologie",
+         "p": 50
+        },
+        {
+         "name": "Travail manuel / Ecriture",
+         "p": 50
+        }
+       ]
+      },
+      {
+       "name": null,
+       "branches": [
+        {
+         "name": "Pratique d'Enseignement",
+         "p": 100,
+         "exam": 0
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "total_general": 5600
+  },
+  {
+   "id": "PG4",
+   "code": "IGE/PS./027",
+   "page_pdf": 81,
+   "title": "Bulletin de la 4e année Humanités — Pédagogie générale",
+   "regime": "semestre",
+   "classes": [
+    "^4e P[ée]dagogie"
+   ],
+   "domains": [
+    {
+     "name": null,
+     "groups": [
+      {
+       "name": null,
+       "branches": [
+        {
+         "name": "Religion",
+         "p": 10,
+         "optional": true
+        },
+        {
+         "name": "Education à la vie",
+         "p": 10
+        },
+        {
+         "name": "Ed. civ. & morale",
+         "p": 10
+        },
+        {
+         "name": "Informatique",
+         "p": 10
+        }
+       ]
+      },
+      {
+       "name": null,
+       "branches": [
+        {
+         "name": "Biologie",
+         "p": 20
+        },
+        {
+         "name": "Education phys. & sportive",
+         "p": 20
+        },
+        {
+         "name": "Géographie",
+         "p": 20
+        },
+        {
+         "name": "Histoire",
+         "p": 20
+        },
+        {
+         "name": "Philosophie",
+         "p": 20
+        },
+        {
+         "name": "Physique",
+         "p": 20
+        }
+       ]
+      },
+      {
+       "name": null,
+       "branches": [
+        {
+         "name": "Anglais",
+         "p": 40
+        },
+        {
+         "name": "Langues nationales",
+         "p": 40
+        },
+        {
+         "name": "Mathématiques",
+         "p": 40
+        }
+       ]
+      },
+      {
+       "name": null,
+       "branches": [
+        {
+         "name": "Français",
+         "p": 50
+        },
+        {
+         "name": "Dessin",
+         "p": 50
+        },
+        {
+         "name": "Didactique des disciplines",
+         "p": 50
+        },
+        {
+         "name": "Didactique générale",
+         "p": 50
+        },
+        {
+         "name": "Ed. musicale / Théâtrale",
+         "p": 50
+        },
+        {
+         "name": "Pédagogie",
+         "p": 50
+        },
+        {
+         "name": "Psychologie",
+         "p": 50
+        },
+        {
+         "name": "Travail manuel / Ecriture",
+         "p": 50
+        }
+       ]
+      },
+      {
+       "name": null,
+       "branches": [
+        {
+         "name": "Pratique d'Enseignement",
+         "p": 100,
+         "exam": 0
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "finalBlock": {
+    "title": "Examen d'État",
+    "rows": [
+     [
+      "Points obtenus",
+      null
+     ],
+     [
+      "Max",
+      null
+     ],
+     [
+      "%",
+      null
+     ]
+    ]
+   },
+   "total_general": 5840
+  },
+  {
+   "id": "EL1",
+   "code": "IGE/P.S./113",
+   "page_pdf": 26,
+   "title": "Bulletin de la 1re année Humanités — Électricité générale",
+   "regime": "semestre",
+   "classes": [
+    "^1re [ÉE]lectricit"
+   ],
+   "domains": [
+    {
+     "name": null,
+     "groups": [
+      {
+       "name": null,
+       "branches": [
+        {
+         "name": "Religion",
+         "p": 10,
+         "optional": true
+        },
+        {
+         "name": "Education à la Vie",
+         "p": 10
+        },
+        {
+         "name": "Ed. civ. & morale",
+         "p": 10
+        },
+        {
+         "name": "Biologie",
+         "p": 10,
+         "optional": true
+        }
+       ]
+      },
+      {
+       "name": null,
+       "branches": [
+        {
+         "name": "Anglais",
+         "p": 20
+        },
+        {
+         "name": "Chimie",
+         "p": 20
+        },
+        {
+         "name": "Electronique numérique",
+         "p": 20
+        },
+        {
+         "name": "Géographie / actualités",
+         "p": 20
+        },
+        {
+         "name": "Histoire",
+         "p": 20
+        },
+        {
+         "name": "Informatique",
+         "p": 20
+        },
+        {
+         "name": "Instr. méth. Mesures",
+         "p": 20
+        },
+        {
+         "name": "Mécanisme",
+         "p": 20
+        },
+        {
+         "name": "Physique",
+         "p": 20
+        },
+        {
+         "name": "Techno. mécanique",
+         "p": 20
+        }
+       ]
+      },
+      {
+       "name": null,
+       "branches": [
+        {
+         "name": "Dessin électrique",
+         "p": 40
+        },
+        {
+         "name": "Dessin industriel",
+         "p": 40
+        },
+        {
+         "name": "Electricité générale",
+         "p": 40
+        },
+        {
+         "name": "Mécanique générale",
+         "p": 40
+        },
+        {
+         "name": "Techno. électr.",
+         "p": 40
+        },
+        {
+         "name": "Electronique",
+         "p": 40
+        }
+       ]
+      },
+      {
+       "name": null,
+       "branches": [
+        {
+         "name": "Français",
+         "p": 50
+        },
+        {
+         "name": "Mathématiques",
+         "p": 50
+        }
+       ]
+      },
+      {
+       "name": null,
+       "branches": [
+        {
+         "name": "Atelier électrique",
+         "p": 100,
+         "exam": 0
+        },
+        {
+         "name": "Atelier ajustage",
+         "p": 100,
+         "exam": 0
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "total_general": 5440
+  },
+  {
+   "id": "EL2",
+   "code": "IGE/P.S./114",
+   "page_pdf": 27,
+   "title": "Bulletin de la 2e année Humanités — Électricité générale",
+   "regime": "semestre",
+   "classes": [
+    "^2e [ÉE]lectricit"
+   ],
+   "domains": [
+    {
+     "name": null,
+     "groups": [
+      {
+       "name": null,
+       "branches": [
+        {
+         "name": "Religion",
+         "p": 10,
+         "optional": true
+        },
+        {
+         "name": "Education à la Vie",
+         "p": 10
+        },
+        {
+         "name": "Ed. civ. & morale",
+         "p": 10
+        },
+        {
+         "name": "Biologie",
+         "p": 10,
+         "optional": true
+        }
+       ]
+      },
+      {
+       "name": null,
+       "branches": [
+        {
+         "name": "Anglais",
+         "p": 20
+        },
+        {
+         "name": "Chimie",
+         "p": 20
+        },
+        {
+         "name": "Electronique numérique",
+         "p": 20
+        },
+        {
+         "name": "Géographie / actualités",
+         "p": 20
+        },
+        {
+         "name": "Histoire",
+         "p": 20,
+         "optional": true
+        },
+        {
+         "name": "Informatique",
+         "p": 20
+        },
+        {
+         "name": "Instr. méth. Mesures",
+         "p": 20
+        },
+        {
+         "name": "Mécanisme",
+         "p": 20
+        },
+        {
+         "name": "Physique",
+         "p": 20
+        },
+        {
+         "name": "Techno mécanique",
+         "p": 20,
+         "optional": true
+        }
+       ]
+      },
+      {
+       "name": null,
+       "branches": [
+        {
+         "name": "Dessin électrique",
+         "p": 40
+        },
+        {
+         "name": "Dessin industriel",
+         "p": 40
+        },
+        {
+         "name": "Electricité générale",
+         "p": 40
+        },
+        {
+         "name": "Mécanique générale",
+         "p": 40,
+         "optional": true
+        },
+        {
+         "name": "Techno. électr.",
+         "p": 40
+        }
+       ]
+      },
+      {
+       "name": null,
+       "branches": [
+        {
+         "name": "Français",
+         "p": 50
+        },
+        {
+         "name": "Mathématiques",
+         "p": 50
+        }
+       ]
+      },
+      {
+       "name": null,
+       "branches": [
+        {
+         "name": "Atelier électrique",
+         "p": 100,
+         "exam": 0
+        },
+        {
+         "name": "Labo. électrique",
+         "p": 100,
+         "exam": 0
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "total_general": 5120
+  },
+  {
+   "id": "EL3",
+   "code": "IGE/P.S./115",
+   "page_pdf": 28,
+   "title": "Bulletin de la 3e année Humanités — Électricité générale",
+   "regime": "semestre",
+   "classes": [
+    "^3e [ÉE]lectricit"
+   ],
+   "domains": [
+    {
+     "name": null,
+     "groups": [
+      {
+       "name": null,
+       "branches": [
+        {
+         "name": "Religion",
+         "p": 10,
+         "optional": true
+        },
+        {
+         "name": "Education à la Vie",
+         "p": 10
+        },
+        {
+         "name": "Ed. civ. & morale",
+         "p": 10
+        },
+        {
+         "name": "Biologie",
+         "p": 10,
+         "optional": true
+        }
+       ]
+      },
+      {
+       "name": null,
+       "branches": [
+        {
+         "name": "Actualités",
+         "p": 20
+        },
+        {
+         "name": "Anglais",
+         "p": 20
+        },
+        {
+         "name": "Automate progr.",
+         "p": 20,
+         "optional": true
+        },
+        {
+         "name": "Electronique + labo.",
+         "p": 20
+        },
+        {
+         "name": "Informatique",
+         "p": 20
+        },
+        {
+         "name": "Instr. méth. Mesures",
+         "p": 20
+        },
+        {
+         "name": "Résistances des matér.",
+         "p": 20
+        }
+       ]
+      },
+      {
+       "name": null,
+       "branches": [
+        {
+         "name": "Dessin électrique",
+         "p": 40
+        },
+        {
+         "name": "Electricité générale",
+         "p": 40
+        },
+        {
+         "name": "Machines électriques",
+         "p": 40
+        },
+        {
+         "name": "Techno. électrique",
+         "p": 40
+        }
+       ]
+      },
+      {
+       "name": null,
+       "branches": [
+        {
+         "name": "Français",
+         "p": 50
+        },
+        {
+         "name": "Mathématiques",
+         "p": 50
+        }
+       ]
+      },
+      {
+       "name": null,
+       "branches": [
+        {
+         "name": "Atelier électrique",
+         "p": 100,
+         "exam": 0
+        },
+        {
+         "name": "Labo. électrique",
+         "p": 100,
+         "exam": 0
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "total_general": 4320
+  },
+  {
+   "id": "EL4",
+   "code": "IGE/P.S./116",
+   "page_pdf": 29,
+   "title": "Bulletin de la 4e année Humanités — Électricité générale",
+   "regime": "semestre",
+   "classes": [
+    "^4e [ÉE]lectricit"
+   ],
+   "domains": [
+    {
+     "name": null,
+     "groups": [
+      {
+       "name": null,
+       "branches": [
+        {
+         "name": "Religion",
+         "p": 10,
+         "optional": true
+        },
+        {
+         "name": "Education à la Vie",
+         "p": 10
+        },
+        {
+         "name": "Ed. civ. & morale",
+         "p": 10
+        }
+       ]
+      },
+      {
+       "name": null,
+       "branches": [
+        {
+         "name": "Actualités",
+         "p": 20
+        },
+        {
+         "name": "Anglais",
+         "p": 20
+        },
+        {
+         "name": "Application élect.",
+         "p": 20
+        },
+        {
+         "name": "Automation",
+         "p": 20
+        },
+        {
+         "name": "Circuit logique",
+         "p": 20,
+         "optional": true
+        },
+        {
+         "name": "Informatique",
+         "p": 20
+        },
+        {
+         "name": "Législation",
+         "p": 20,
+         "optional": true
+        },
+        {
+         "name": "Organisation",
+         "p": 20
+        }
+       ]
+      },
+      {
+       "name": null,
+       "branches": [
+        {
+         "name": "Electronique + labo.",
+         "p": 40
+        },
+        {
+         "name": "Machine électrique",
+         "p": 40
+        },
+        {
+         "name": "Mécanique appliquée",
+         "p": 40
+        },
+        {
+         "name": "Schéma",
+         "p": 40
+        }
+       ]
+      },
+      {
+       "name": null,
+       "branches": [
+        {
+         "name": "Dessin électrique",
+         "p": 50
+        },
+        {
+         "name": "Français",
+         "p": 50
+        },
+        {
+         "name": "Labo. électrique",
+         "p": 50
+        },
+        {
+         "name": "Mathématiques",
+         "p": 50
+        }
+       ]
+      },
+      {
+       "name": null,
+       "branches": [
+        {
+         "name": "Atelier électrique",
+         "p": 100,
+         "exam": 0
+        },
+        {
+         "name": "Labo. électrique (2)",
+         "p": 100,
+         "exam": 0,
+         "alias_of": "Labo. électrique"
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "finalBlock": {
+    "title": "Examen d'État",
+    "rows": [
+     [
+      "Points obtenus",
+      null
+     ],
+     [
+      "Max",
+      null
+     ],
+     [
+      "%",
+      null
+     ]
+    ]
+   },
+   "total_general": 5200
+  }
+ ]
+}
