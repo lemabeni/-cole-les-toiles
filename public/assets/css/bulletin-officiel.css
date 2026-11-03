@@ -1,0 +1,74 @@
+/* Bulletin officiel — mise en page A4 (écran + impression). Couleurs de la charte pour l'interface ; la feuille reste sobre (noir sur blanc) pour la photocopie. */
+.ob-scroll{overflow:auto;border:1px solid var(--pearl,#d9dcec);border-radius:var(--r-md,12px);background:#f4f5fa;padding:var(--s-3,12px)}
+.ob-sheet{--ob-line:#222;background:#fff;color:#111;width:210mm;max-width:none;min-width:210mm;margin:0 auto;padding:7mm 8mm;font:8pt/1.25 "Times New Roman",Times,serif;box-shadow:0 1px 6px rgba(36,43,80,.18);box-sizing:border-box}
+.ob-head{display:grid;grid-template-columns:22mm 1fr 22mm;align-items:center;text-align:center;font-weight:700;font-size:10pt;gap:4mm;margin-bottom:2mm}
+.ob-flag{height:14mm;width:21mm;border:1px solid #888}
+.ob-seal{height:16mm;width:auto;margin-left:auto}
+.ob-head img{max-height:16mm;max-width:22mm;margin-left:auto}
+.ob-id{border:1px solid var(--ob-line);padding:1mm 2mm;font-size:9pt;display:flex;gap:2mm;align-items:center}
+.ob-boxes{display:inline-flex}.ob-boxes i{display:inline-block;width:4.2mm;height:4.4mm;border:1px solid var(--ob-line);margin-left:-1px}
+.ob-ident{display:grid;grid-template-columns:1fr 1fr;border:1px solid var(--ob-line);border-top:0}
+.ob-ident>div{padding:1.5mm 2mm}.ob-ident>div+div{border-left:1px solid var(--ob-line)}
+.ob-line{display:flex;gap:1.5mm;align-items:baseline;margin:.8mm 0;font-size:8pt}
+.ob-fill{flex:1;border-bottom:1px dotted #555;min-height:1.1em;min-width:10mm;outline:none;display:inline-block}
+.ob-fill:focus,.ob-edit:focus{background:#fff7ec;outline:2px solid #EB9A43}
+.ob-bt{font-size:9pt;text-align:center;margin:2mm 0 1mm;font-weight:700}
+.ob-table{width:100%;border-collapse:collapse;table-layout:fixed;font-size:6.2pt}
+.ob-table th,.ob-table td{border:1px solid var(--ob-line);padding:.2mm .6mm;text-align:center;overflow:hidden;white-space:nowrap}
+.ob-table thead th{background:#eef0f8;font-size:5.6pt;font-weight:700}
+.ob-table .ob-name{width:30mm;text-align:left;white-space:normal;font-weight:400;padding-left:1mm}
+.ob-table .ob-m{font-weight:700;background:#fafafa}
+.ob-table .ob-v{height:3.6mm}.ob-table .ob-tot{font-weight:700}
+.ob-table .ob-na{background:repeating-linear-gradient(45deg,#ddd 0 1px,#fff 1px 3px)}
+.ob-dom th{background:#c9cde3;font-size:6.4pt;text-align:center}
+.ob-grp th{background:#e3e5f1;font-size:6pt;text-align:left;padding-left:1mm}
+.ob-sub th,.ob-sub td,.ob-gen th,.ob-gen td{font-weight:700}.ob-gen th,.ob-gen td{background:#eef0f8}
+.ob-foot .ob-name{font-weight:700}
+.ob-edit{height:4mm;text-align:left;outline:none}
+.ob-final{margin:2mm 0;border-collapse:collapse;font-size:7pt}.ob-final caption{font-weight:700;text-align:left}.ob-final th,.ob-final td{border:1px solid var(--ob-line);padding:.3mm 2mm;min-width:16mm}
+.ob-decision{display:flex;justify-content:space-between;margin-top:2mm;font-size:8pt}
+.ob-sign{display:flex;justify-content:space-between;margin-top:5mm;font-size:8pt;min-height:16mm}
+.ob-note{font-size:6.5pt;margin-top:2mm;border-top:1px solid #999;padding-top:1mm}
+/* grilles de saisie et éditeur */
+dialog.ob-dialog{border:0;border-radius:var(--r-lg,16px);padding:0;width:min(96vw,1100px);max-height:92dvh;box-shadow:var(--shadow-2,0 8px 30px rgba(0,0,0,.3));color:var(--ink,#1c2142)}
+dialog.ob-dialog::backdrop{background:rgba(36,43,80,.55)}
+dialog.ob-dialog form{display:flex;flex-direction:column;max-height:92dvh}
+.ob-dialog header,.ob-dialog footer{padding:var(--s-4,16px) var(--s-5,20px)}
+.ob-dialog .ob-body{overflow:auto;padding:0 var(--s-5,20px)}
+.ob-grid{border-collapse:collapse;width:100%;font-size:.85rem}
+.ob-grid th,.ob-grid td{border:1px solid var(--pearl,#d9dcec);padding:2px 4px}
+.ob-grid thead th{position:sticky;top:0;background:var(--mist,#eef0f8);z-index:1}
+.ob-grid th[scope=row]{text-align:left;font-weight:500;min-width:170px;background:#fff;position:sticky;left:0}
+.ob-grid input:not([type=checkbox]){width:100%;min-width:62px;min-height:36px;box-sizing:border-box}
+.ob-grid .ob-na{background:repeating-linear-gradient(45deg,#e6e8f2 0 2px,#fff 2px 6px)}
+.ob-editor input[data-f=name]{min-width:200px}
+.ob-toolbar{display:flex;flex-wrap:wrap;gap:var(--s-2,8px);align-items:center;margin:var(--s-3,12px) 0}
+.ob-toolbar select,.ob-toolbar input{min-height:44px}
+@page{size:A4 portrait;margin:5mm}
+@media print{
+  html,body{background:#fff!important;height:auto!important;overflow:visible!important}
+  body *:not(.ob-sheet):not(.ob-sheet *):not(:has(.ob-sheet)){display:none!important}
+  *:has(.ob-sheet){display:block!important;position:static!important;width:auto!important;height:auto!important;max-height:none!important;margin:0!important;padding:0!important;border:0!important;box-shadow:none!important;background:none!important;overflow:visible!important;transform:none!important;grid-template-columns:none!important}
+  .ob-sheet,.ob-sheet *{visibility:visible!important}
+  .ob-sheet{position:static;width:200mm;min-width:0;margin:0 auto;padding:3mm 4mm;box-shadow:none}
+  .ob-sheet tr{break-inside:avoid}
+  .ob-fill,.ob-edit{border-color:#555;background:none!important;outline:none!important}
+}
+@media (prefers-reduced-motion:reduce){dialog.ob-dialog[open]{animation:none}}
+
+.ob-sheet th,.ob-sheet td{text-transform:none;letter-spacing:0}
+.ob-res{padding:0!important;background:#fffdf6}
+.ob-sheet table td.ob-res input.ob-in{all:unset;display:block;box-sizing:border-box;width:100%;height:3.6mm;line-height:3.6mm;text-align:center;font:inherit;color:#0b2a8a;background:transparent;cursor:text}
+.ob-sheet .ob-table th,.ob-sheet .ob-table td{font-family:"Times New Roman",Times,serif;color:#111}
+.ob-sheet .ob-table .ob-name{font-size:6.6pt}
+.ob-sheet table td.ob-res input.ob-in:focus{outline:2px solid #EB9A43;outline-offset:-2px;background:#fff7ec}
+.ob-sheet table td.ob-res input.ob-in.ob-bad{background:#fde8e8;color:#9b1c1c}
+.ob-sheet table td.ob-res input.ob-in.ob-ok{background:#e8f6ec}
+.ob-toolbar select{max-width:100%}
+.ob-sheet .ob-edit,.ob-sheet .ob-fill{cursor:default}
+@media (hover:none){.ob-sheet table td.ob-res input.ob-in{height:5mm;line-height:5mm}}
+@media print{.ob-sheet table td.ob-res input.ob-in{color:#000;background:none!important;outline:none!important}.ob-res{background:none}}
+.ob-sheet .ob-table td.ob-m,.ob-sheet .ob-table td.ob-tot,.ob-sheet .ob-table .ob-foot td.ob-v{font-size:5.4pt;padding-left:0;padding-right:0}
+@media print{.ob-sheet{padding:1mm 3mm 0}.ob-sheet .ob-note{font-size:5.5pt;margin-top:1mm;padding-top:.5mm}.ob-sheet .ob-sign{margin-top:2mm;min-height:0}.ob-sheet .ob-decision{margin-top:1mm}.ob-sheet .ob-decision p{margin:0 0 .5mm}.ob-sheet .ob-table td.ob-v{height:3.2mm}.ob-sheet table td.ob-res input.ob-in{height:3.2mm;line-height:3.2mm}}
+.ob-sheet table td.ob-res input.ob-in{font-family:"Times New Roman",Times,serif;font-size:6.6pt;font-weight:700}
+@media (hover:none) and (pointer:coarse){.ob-sheet table td.ob-res input.ob-in{font-size:11px}}
